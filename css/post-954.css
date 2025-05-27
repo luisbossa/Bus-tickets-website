@@ -64,7 +64,7 @@
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
   background-color: var(--c-b70a650);
-  background-image: url("/images/services_banner.jpg");
+  background-image: url("/images/services_banner.webp");
   background-size: cover;
   background-position: center;
 }
@@ -1414,7 +1414,7 @@
   .elementor-element.elementor-element-abd0a5f
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
-  background-image: url("/images/services.jpg");
+  background-image: url("/images/services.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }

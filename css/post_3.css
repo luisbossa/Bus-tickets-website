@@ -65,7 +65,7 @@
   .elementor-element.elementor-element-cbde730
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
-  background-image: url("/images/img_hero.jpg");
+  background-image: url("/images/img_hero.webp");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -699,7 +699,7 @@
   .elementor-element.elementor-element-cdb7ad0
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
-  background-image: url("/images/medium_img.jpeg");
+  background-image: url("/images/medium_img.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -798,7 +798,7 @@
   .elementor-element.elementor-element-03a0ab9
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
-  background-image: url("/images/we_in.jpeg");
+  background-image: url("/images/we_in.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1717,7 +1717,7 @@
   .elementor-element.elementor-element-1f531ad
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
-  background-image: url("/images/bus_1.png");
+  background-image: url("/images/bus_1.webp");
   background-position: 0px -155px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2112,7 +2112,7 @@ body:not(.rtl)
   .elementor-element.elementor-element-26e23b9
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
-  background-image: url("/images/bus_3.png");
+  background-image: url("/images/bus_3.webp");
   background-position: 0px -155px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2508,7 +2508,7 @@ body:not(.rtl)
   .elementor-element.elementor-element-a49efe8
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
-  background-image: url("/images/buses_3.png");
+  background-image: url("/images/buses_3.webp");
   background-position: 0px -155px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2897,7 +2897,7 @@ body:not(.rtl)
   .elementor-element.elementor-element-b0e1e19
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
-  background-image: url("/images/bus_in.jpg");
+  background-image: url("/images/bus_in.webp");
   background-position: -171px 0px;
   background-repeat: no-repeat;
   background-size: cover;

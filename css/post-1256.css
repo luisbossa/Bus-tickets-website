@@ -50,7 +50,7 @@
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
   background-color: var(--c-b70a650);
-  background-image: url(/images/details_banner.jpeg);
+  background-image: url(/images/details_banner.webp);
   background-size: cover;
   background-position: center;
 }
@@ -1422,7 +1422,7 @@ body:not(.rtl)
   .elementor-element.elementor-element-ecd7e3f
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
-  background-image: url("/images/detail_bus_1.jpg");
+  background-image: url("/images/detail_bus_1.webp");
   background-position: 0px 0px;
   background-repeat: no-repeat;
   background-size: cover;

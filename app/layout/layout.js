@@ -22,7 +22,7 @@ header.innerHTML = `
                                     <div class="hfe-site-logo-container">
                                         <a href="/index.html" class="elementor-clickable" data-elementor-open-lightbox="">
                                             <img 
-                                                src="/images/logo.png" 
+                                                src="/images/logo.webp" 
                                                 alt="logo" 
                                                 class="hfe-site-logo-img elementor-animation-" 
                                             />
@@ -146,7 +146,7 @@ footer.innerHTML = `
                                             <div class="hfe-site-logo-set">
                                                 <div class="hfe-site-logo-container">
                                                     <img class="hfe-site-logo-img elementor-animation-"
-                                                        src="/images/footer_logo.png" alt="footer logo" />
+                                                        src="/images/footer_logo.webp" alt="footer logo" />
                                                 </div>
                                             </div>
                                         </a>

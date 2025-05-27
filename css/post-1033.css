@@ -50,7 +50,7 @@
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
   background-color: var(--c-green);
-  background-image: url("/images/contact_banner.jpg");
+  background-image: url("/images/contact_banner.webp");
   background-size: cover;
   background-position: center;
 }

@@ -767,7 +767,7 @@ h6 {
 .testimonials {
   float: left;
   width: 100%;
-  background: url(../images/testimonials.png) 50% 100% no-repeat;
+  background: url(../images/testimonials.webp) 50% 100% no-repeat;
   overflow: hidden;
   color: var(--c-white);
   padding: 90px 0 70px;

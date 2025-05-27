@@ -50,7 +50,7 @@
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
   background-color: var(--c-b70a650);
-  background-image: url("/images/buses_banner.jpg");
+  background-image: url("/images/buses_banner.webp");
   background-size: cover;
   background-position: center;
 }
@@ -430,7 +430,7 @@
   .elementor-element.elementor-element-413a661
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
-  background-image: url("/images/bus_1.png");
+  background-image: url("/images/bus_1.webp");
   background-position: 0px -180px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -834,7 +834,7 @@ body:not(.rtl)
   .elementor-element.elementor-element-8b319f7
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
-  background-image: url("/images/bus_3.png");
+  background-image: url("/images/bus_3.webp");
   background-position: 0px -180px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1239,7 +1239,7 @@ body:not(.rtl)
   .elementor-element.elementor-element-bd62bc9
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
-  background-image: url("/images/buses_3.png");
+  background-image: url("/images/buses_3.webp");
   background-position: 0px -180px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1664,7 +1664,7 @@ body:not(.rtl)
   .elementor-element.elementor-element-56f326a
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
-  background-image: url("/images/buses_4.png");
+  background-image: url("/images/buses_4.webp");
   background-position: 0px -180px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2069,7 +2069,7 @@ body:not(.rtl)
   .elementor-element.elementor-element-b9fe124
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
-  background-image: url("/images/bus_2.png");
+  background-image: url("/images/bus_2.webp");
   background-position: 0px -180px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2474,7 +2474,7 @@ body:not(.rtl)
   .elementor-element.elementor-element-4e12aee
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
-  background-image: url("/images/buses_1.png");
+  background-image: url("/images/buses_1.webp");
   background-position: 0px -180px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2878,7 +2878,7 @@ body:not(.rtl)
   .elementor-element.elementor-element-302f639
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
-  background-image: url("/images/bus_2.png");
+  background-image: url("/images/bus_2.webp");
   background-position: -171px 0px;
   background-repeat: no-repeat;
   background-size: cover;
