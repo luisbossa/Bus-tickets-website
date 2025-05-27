@@ -3,6 +3,7 @@
 }
 
 /* Container fix for genesis themes */
+
 .ehf-template-genesis.ehf-header .site-header .wrap,
 .ehf-template-genesis.ehf-footer .site-footer .wrap,
 .ehf-template-generatepress.ehf-header .site-header .inside-header {
@@ -12,12 +13,14 @@
 }
 
 /* Container fix for generatepress theme */
+
 .ehf-template-generatepress.ehf-header .site-header,
 .ehf-template-generatepress.ehf-footer .site-footer {
     width: 100%;
     padding: 0;
     max-width: 100%;
     background-color: transparent !important;
+    /* override generatepress default white color for header */
 }
 
 .bhf-hidden {
@@ -25,6 +28,7 @@
 }
 
 /* Fix: Header hidden below the page content */
+
 .ehf-header #masthead {
     z-index: 99;
     position: relative;
