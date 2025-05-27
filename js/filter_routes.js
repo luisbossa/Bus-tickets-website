@@ -207,8 +207,20 @@ document.addEventListener("DOMContentLoaded", function () {
       if (fechaSeleccionadaDate < fechaActualDate) {
         horariosFiltrados = [];
       } else {
-        // Si la fecha es hoy o futura, mostrar todos los horarios
-        horariosFiltrados = ruta.horarios;
+        // Si la fecha es hoy o futura, mostrar horarios válidos
+        if (fechaSeleccionadaDate.getTime() > fechaActualDate.getTime()) {
+          // Fecha futura: mostrar todos los horarios
+          horariosFiltrados = ruta.horarios;
+        } else {
+          // Fecha es hoy: filtrar horarios mayores a la hora actual
+          const ahora = new Date();
+          horariosFiltrados = ruta.horarios.filter((horaStr) => {
+            const [horas, minutos] = horaStr.split(":").map(Number);
+            const horaRuta = new Date();
+            horaRuta.setHours(horas, minutos, 0, 0);
+            return horaRuta > ahora;
+          });
+        }
       }
     } else {
       // Si no hay fecha seleccionada, no mostrar horarios

@@ -170,11 +170,10 @@ destinos.forEach((destino) => {
   }
 });
 
-// Actualizar horarios cuando cambia destino o fecha
 function actualizarHorarios() {
   const origenSeleccionado = selectOrigen.value;
   const destinoSeleccionado = selectDestino.value;
-  const fechaSeleccionada = inputDate.value;
+  const fechaSeleccionada = inputDate.value; // formato "YYYY-MM-DD"
 
   // Limpiar y agregar el placeholder
   selectHora.innerHTML = "";
@@ -184,7 +183,6 @@ function actualizarHorarios() {
   placeholderOption.selected = true;
   selectHora.appendChild(placeholderOption);
 
-  // Si falta origen, destino o fecha, mostrar mensaje de "No hay horarios disponibles"
   if (!origenSeleccionado || !destinoSeleccionado || !fechaSeleccionada) {
     const noOption = document.createElement("option");
     noOption.textContent = "No hay horarios disponibles";
@@ -206,12 +204,20 @@ function actualizarHorarios() {
     return;
   }
 
-  // Validar fecha
-  const fechaSeleccionadaDate = new Date(fechaSeleccionada);
-  const fechaActualDate = new Date(today);
-  fechaSeleccionadaDate.setHours(0, 0, 0, 0);
-  fechaActualDate.setHours(0, 0, 0, 0);
+  // Parsear fecha seleccionada localmente para evitar desfase UTC
+  const [year, month, day] = fechaSeleccionada.split("-").map(Number);
+  // Mes en JS es 0-based, restamos 1 al mes
+  const fechaSeleccionadaDate = new Date(year, month - 1, day);
 
+  // Fecha actual con horas, minutos, segundos a 0 para comparar solo fechas
+  const ahora = new Date();
+  const fechaActualDate = new Date(
+    ahora.getFullYear(),
+    ahora.getMonth(),
+    ahora.getDate()
+  );
+
+  // Validar si fecha es pasada
   if (fechaSeleccionadaDate < fechaActualDate) {
     const noOption = document.createElement("option");
     noOption.textContent = "No hay horarios disponibles";
@@ -220,7 +226,20 @@ function actualizarHorarios() {
     return;
   }
 
-  const horariosFiltrados = rutaSeleccionada.horarios;
+  let horariosFiltrados;
+
+  if (fechaSeleccionadaDate.getTime() > fechaActualDate.getTime()) {
+    // Fecha futura: mostrar todos los horarios
+    horariosFiltrados = rutaSeleccionada.horarios;
+  } else {
+    // Fecha es hoy: filtrar horarios posteriores a la hora actual
+    horariosFiltrados = rutaSeleccionada.horarios.filter((horaStr) => {
+      const [horas, minutos] = horaStr.split(":").map(Number);
+      // Construir objeto fecha con fecha seleccionada + hora y minuto
+      const horarioDate = new Date(year, month - 1, day, horas, minutos, 0, 0);
+      return horarioDate > ahora;
+    });
+  }
 
   if (horariosFiltrados.length === 0) {
     const noOption = document.createElement("option");
@@ -230,7 +249,6 @@ function actualizarHorarios() {
     return;
   }
 
-  // Agregar horarios filtrados
   horariosFiltrados.forEach((hora) => {
     const opt = document.createElement("option");
     opt.value = hora;
