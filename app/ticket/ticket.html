@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bus booking</title>
+    <meta name='robots' content='max-image-preview:large' />
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/css/ekiticons.css" media="all" />
+    <link rel="stylesheet" href="/css/fadeIn.min.css" media="all" />
+    <link rel="stylesheet" href="/css/frontend.min.css" media="all" />
+    <link rel="stylesheet" href="/css/header-footer-elementor.css" media="all" />
+    <link rel="stylesheet" href="/css/post_1.css" media="all" />
+    <link rel="stylesheet" href="/css/post_2.css" media="all" />
+    <link rel="stylesheet" href="/css/post_3.css" media="all" />
+    <link rel='stylesheet' href='/css/post-1140.css' media='all' />
+    <link rel="stylesheet" href="/css/style.css" media="all" />
+    <link rel="stylesheet" href="/css/style.min.css" media="all" />
+    <link rel="stylesheet" href="/css/style3.css" media="all" />
+    <link rel="stylesheet" href="/css/swiper.min.css" media="all" />
+    <link rel="stylesheet" href="/css/widget-counter.min.css" media="all" />
+    <link rel="stylesheet" href="/css/widget-icon-list.min.css" media="all" />
+    <link rel="stylesheet" href="/css/widget-styles.css" media="all" />
+    <link rel="stylesheet" href="/css/jost.css" media="all" />
+    <link rel="stylesheet" href="/css/ticket.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/ui.js"></script>
+</head>
+
+<body class="elementor-kit-28">
+    <div id="page" class="hfeed site">
+
+        <header id="masthead" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
+            <!-- Header dinámico -->
+        </header>
+
+        <div id="custom-notification" class="notification-blur">
+            <p id="notification-message">Mensaje de notificación</p>
+        </div>
+
+
+        <!-- Modal -->
+        <transparent id="modal-backdrop">
+            <window id="popup-hola" class="window">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title modal-title-tig">Términos y condiciones del viaje</h4>
+                    </div>
+
+                    <div class="m_body">
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item border-0 list-terms-conditions">
+                                Válido únicamente para la fecha y hora indicada.
+                            </li>
+                            <li class="list-group-item border-0 list-terms-conditions">
+                                Este ticket es venta final, no se realizan cambios ni
+                                devoluciones.
+                            </li>
+                            <li class="list-group-item border-0 list-terms-conditions">
+                                La empresa considera carga todo aquello que no sea
+                                enseres personales contemplados, para su transporte,
+                                deberá pagar el importe por el transporte del artículo
+                                en la oficina correspondiente (Sujeto a espacio).
+                            </li>
+                            <li class="list-group-item border-0 list-terms-conditions">
+                                No se permite cargar muebles o electrodomésticos cuyo
+                                tamaño exceda la razonabilidad, la empresa se reserva el
+                                derecho de cobrar excedente por peso o volumen.
+                            </li>
+                            <li class="list-group-item border-0 list-terms-conditions">
+                                No se permite viajar con animales (Ley de Tránsito).
+                            </li>
+                            <li class="list-group-item border-0 list-terms-conditions">
+                                Todo asiento ocupado debe cancelarse. En el caso de
+                                infantes no pagarán transporte cuando viaje en brazos y
+                                hasta 3 años de edad.
+                            </li>
+                            <li class="list-group-item border-0 list-terms-conditions">
+                                Nuestra empresa, conforme a la normativa vigente, no
+                                realizamos reembolsos, no se responsabilizará por
+                                retrasos o suspensiones causados por terceros en vías o
+                                puntos de abordaje y desabordaje.
+                            </li>
+                            <li class="list-group-item border-0 list-terms-conditions">
+                                El pasajero debe ocupar el asiento indicado en su
+                                boleto.
+                            </li>
+                            <li class="list-group-item border-0 list-terms-conditions">
+                                El autobús se detendrá únicamente en las paradas
+                                autorizadas.
+                            </li>
+                            <li class="list-group-item border-0 list-terms-conditions">
+                                Todo pasajero debe mantener las mejores normas de
+                                conducta durante el viaje, no se permite pasajeros en
+                                estado de embriaguez, fumar, consumir drogas o cualquier
+                                otra actitud que atente contra los demás pasajeros, la
+                                empresa se reserva el derecho en excluir pasajeros que
+                                incumplan esta condición. (Ley de tránsito. Reglamento
+                                de transporte)
+                            </li>
+                            <li class="list-group-item border-0 list-terms-conditions">
+                                Cuide su equipaje de mano, la empresa no se hace
+                                responsable por pérdidas de equipaje de mano.
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="m_footer">
+                        <button type="button" class="elementor-button elementor-button-link elementor-size-sm gray"
+                            onclick="closeWindow('#popup-hola')">
+                            Aceptar
+                        </button>
+                    </div>
+                </div>
+            </window>
+        </transparent>
+
+        <div data-elementor-type="wp-post" data-elementor-id="1140" class="elementor elementor-1140">
+            <div class="elementor-element elementor-element-633c9c4b e-flex e-con-boxed e-con e-parent"
+                data-id="633c9c4b" data-element_type="container"
+                data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                <div class="e-con-inner p_none">
+                    <div class="encabezado-p">
+                        <h2 class="elementor-heading-title elementor-size-default">Resumen de Compra</h2>
+                    </div>
+
+                    <div class="row d-flex justify-center">
+                        <div class="col-lg-4 col-12 mt-4">
+                            <div class="booking-sidebar">
+                                <div
+                                    class="px-30 py-30 border-light rounded-20 mt-30 min-h-0 md:min-h-[460px] lg:min-h-[460px]">
+                                    <div class="text-20 fw-500 mb-20">Seleccione las Terminales</div>
+                                    <div class="lg:px-0 js-form-dd js-liverSearch">
+                                        <h4 class="text-15 fw-500 ls-2 lh-16">Salida</h4>
+                                        <div class="text-15 text-light-1 ls-2 lh-16">
+                                            <div class="css-b62m3t-container">
+                                                <span id="react-select-2-live-region"
+                                                    class="css-7pg0cj-a11yText"></span>
+                                                <span aria-live="polite" aria-atomic="false"
+                                                    aria-relevant="additions text" role="log"
+                                                    class="css-7pg0cj-a11yText"></span>
+                                                <div class="select_div">
+                                                    <select id="select_1" class="mf-select">
+                                                        <option value="" disabled selected hidden>Seleccione una
+                                                            terminal de origen</option>
+                                                    </select>
+                                                    <!-- Agregamos el ícono de la flecha -->
+                                                    <div class="select-icon">
+                                                        <i class="fas fa-chevron-down"></i>
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" value="487" name="stopOrigin">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="lg:px-0 js-form-dd js-liverSearch mt-40">
+                                        <h4 class="text-15 fw-500 ls-2 lh-16">Llegada</h4>
+                                        <div class="text-15 text-light-1 ls-2 lh-16">
+                                            <div class="css-b62m3t-container">
+                                                <span id="react-select-3-live-region"
+                                                    class="css-7pg0cj-a11yText"></span>
+                                                <span aria-live="polite" aria-atomic="false"
+                                                    aria-relevant="additions text" role="log"
+                                                    class="css-7pg0cj-a11yText"></span>
+                                                <div class="select_div">
+                                                    <select id="select_2" class="mf-select">
+                                                        <option value="" disabled selected hidden>Seleccione una
+                                                            terminal de destino</option>
+                                                    </select>
+                                                    <div class="select-icon">
+                                                        <i class="fas fa-chevron-down"></i>
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" value="" name="stopDestination">
+                                            </div>
+                                            <span class="color-red"></span>
+                                        </div>
+                                    </div>
+                                    <div class="row my-4">
+                                        <div class="col-md-12">
+                                            <label for="terms-conditions" class="checkbox-container">
+                                                <input type="checkbox" id="terms-conditions"
+                                                    formcontrolname="acceptTerms" class="check_input">
+                                                <span class="checkmark"></span>
+                                                <div class="form-check-label m-2 text-uppercase terms-conditions">
+                                                    Acepto los
+                                                    <button onclick="toggleWindow('#popup-hola')" role="button">
+                                                        Términos y condiciones</button>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-5 mt-30">
+
+                            <div class="row y-gap-10">
+                                <div class="col-12">
+                                    <div class="rounded-20 bg-clock">
+                                        <div class="row items-center justify-center">
+                                            <div class="col-2 mr-10">
+                                                <div class="flex-center rounded-full bg-white">
+                                                    <i class="icon-clock text-30"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-9">
+                                                <h4 class="text-18 lh-15 fw-500" id="timer">03:00</h4>
+                                                <div class="text-15 lh-15">Estimado usuario, este es el tiempo
+                                                    restante para finalizar su compra</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="booking-sidebar">
+                                <div class="px-30 py-30 border-light rounded-20 mt-30">
+                                    <div class="text-20 fw-500 mb-20">Resumen de Compra</div>
+
+
+                                    <!-- Transportista -->
+                                    <div class="row y-gap-5 justify-between">
+                                        <div class="col-auto">
+                                            <div class="text-15">Transportista: </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="text-15 uppercase" id="transportistaInfo">Busena S.A.</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Fecha de Viaje -->
+                                    <div class="row y-gap-5 justify-between">
+                                        <div class="col-auto">
+                                            <div class="text-15">Fecha de Viaje: </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="text-15" id="fechaViajeInfo">--</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Ruta -->
+                                    <div class="row y-gap-5 justify-between">
+                                        <div class="col-auto">
+                                            <div class="text-15">Ruta: </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="text-15" id="rutaInfo">--</div>
+                                        </div>
+                                    </div>
+                                    <div class="row y-gap-5 justify-between">
+                                        <div class="col-auto">
+                                            <div class="text-15">Número de asiento(s): </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div id="selectedSeatsText"> </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    
+                                    <div class="row y-gap-5 justify-between pt-5">
+                                        <div class="col-auto">
+                                            <div class="text-15" id="normal-count">0 Tiquetes Normales:</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="text-15" id="normal-price">0</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row y-gap-5 justify-between pt-5">
+                                        <div class="col-auto">
+                                            <div class="text-15" id="adulto-count">0 Tiquetes Adulto Mayor:</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="text-15" id="adulto-price">0</div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                    <div class="row y-gap-5 justify-between">
+                                        <div class="col-auto">
+                                            <div class="text-15">Comisión Busena: </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="text-15" id="comision_busena">0.00</div>
+                                        </div>
+                                    </div>
+                                    <div class="row y-gap-5 justify-between pt-5">
+                                        <div class="col-auto">
+                                            <div class="text-15">IVA comisión Busena: </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="text-15" id="iva-comision_busena">0.00</div>
+                                        </div>
+                                    </div>
+                                    <div class="py-20 mt-20">
+                                        <div class="row y-gap-5 justify-between">
+                                            <div class="col-auto">
+                                                <div class="text-18 lh-13 fw-500">Total</div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="text-18 lh-13 fw-500" id="total">0.00</div>
+                                            </div>
+                                        </div>
+                                        <hr class="mt-1 mb-0 border-light">
+                                    </div>
+
+                                    <div class="rounded-5 mt-20">
+                                        <div class="row justify-center btn_gap">
+                                            <div class="col-auto">
+                                                <a href="/app/search/search.html"
+                                                    class="elementor-button elementor-button-link elementor-size-sm gray"
+                                                    type="button">Cancelar Compra
+                                                </a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="/app/pay_form/pay_form.html" id="comprarBoleto"
+                                                    class="elementor-button elementor-button-link elementor-size-sm gray"
+                                                    type="button" disabled>
+                                                    Comprar Boleto
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer itemtype="https://schema.org/WPFooter" itemscope="itemscope" id="colophon" role="contentinfo">
+            <!-- Footer dinámico -->
+        </footer>
+    </div>
+
+    <script src="/js/jquery-numerator.min.js"></script>
+    <script src="/js/mediaelement-and-player.min.js"></script>
+    <script src="/js/react.min.js"></script>
+    <script src="/js/react-dom.min.js"></script>
+
+    <script src="/js/widget-scripts.js"></script>
+    <script src="/js/webpack.runtime.min.js"></script>
+    <script src="/js/frontend-modules.min.js"></script>
+
+    <script src="/js/header.js"></script>
+    <script src="/js/ticket.js"></script>
+    <script src="/js/frontend.min.js"></script>
+    <script src="/js/elementor.js"></script>
+
+    <script src="/gsap/gsap.min.js"></script>
+    <script src="/gsap/Flip.min.js"></script>
+    <script src="/gsap/CustomEase.min.js"></script>
+    <script src="/js/ui-functions.js"></script>
+    <script src="/app/layout/layout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/css/style.css" media="all" />
+    <link href="/css/payform.css" rel="stylesheet" />
+    <script src="/js/jquery-3.3.1.js"></script>
+    <script src="/js/process3D.js"></script>
+    <!-- <script src="/js/no_devtools.js"></script> -->
+    <title>
+        Payment Form
+    </title>
+</head>
+
+<body>
+    <div id="users-device-size">
+        <div id="xs" class="visible-xs"></div>
+        <div id="sm" class="visible-sm"></div>
+        <div id="md" class="visible-md"></div>
+        <div id="lg" class="visible-lg"></div>
+    </div>
+
+    <div id="custom-notification" class="notification-blur">
+        <p id="notification-message">Mensaje de notificación</p>
+    </div>
+
+    <form id="payment_form" class="payment_form" method="POST">
+        <div id="load" style="display: none"></div>
+        <input name="enableautoredirect" type="hidden" id="enableautoredirect" style="display: none" value="False" />
+        <input name="autoredirecttime" type="hidden" id="autoredirecttime" style="display: none" value="20" />
+
+        <center>
+            <div id="div_full" class="row">
+                <div id="jquery_div">
+                    <Script>
+                        $(document).ready(function () {
+                            var valuewithid = '655682';
+                            $('#total_amount').val('3940.00');
+                            $('#TokenID').val('LYQUH40059');
+                            $('#UrlResultOk').val('/payment-response?success=true&tk=LYQUH40059');
+                            $('#UrlResultNotOk').val('/payment-response?success=false&tk=LYQUH40059');
+                            var userLang = navigator.language || navigator.userLanguage;
+                            var lang_final = userLang.split('-')[0];
+                            if (lang_final == 'es') {
+                                $('#name_buttom_pay').text('Pagar ₡ 3,940,00');
+                            } else {
+                                $('#name_buttom_pay').text('Pay ₡ 3,940,00')
+                            };
+                            iniciarCountdown(5);
+                        });
+                    </Script>
+                </div>
+
+                <div id="jquery3DSecure_div"></div>
+
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="panel panel-default credit-card-box" style="max-width: 380px;position:relative;">
+
+                        <div style="position:absolute;position: absolute; z-index: 1000; background-color: white; width: 100%; height: 100%; opacity: 0.9;"
+                            id="div_loader_procesarpagolocal">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="top: 40%;font-weight: 900;">
+                                <span id="Label1" style="font-size: 21px;">Procesando por favor espere...</span>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="top: 50%;"><img
+                                    src="/Images/loader_process.gif" style="max-width: 125px;" /></div>
+                        </div>
+                        <div id="panel_logo" class="panel-heading display-table" style="padding:0px !important;">
+                            <div class="row display-tr">
+                                <img src="/images/pay_logo.png" alt="Logo" height="160">
+                            </div>
+                        </div>
+                        <div class="panel-heading display-table" style="padding: 0px 15px !important;">
+                            <div class="row display-tr">
+                                <div style="width:100%;text-align:center">
+                                    <img class="img-responsive" src="/images/tarjetas.svg"
+                                        style="width:100%; max-width:180px;margin: 8px;display:inline-block" />
+                                </div>
+
+                                <div id="countdown"
+                                    style="display:inline-block;margin-top: 3px; margin-bottom: 4px;font-weight: 600;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body" id="Form_full">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="form-group font_size">
+                                        <b><span id="Order">Referencia: </span></b>
+                                        <p id="Order_post">0</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="form-group font_size">
+                                        <b><span id="Amount">Monto: </span></b>
+                                        <p id="totalamount">₡ 0</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="card_number">
+                                            <span>Número de tarjeta</span>
+                                        </label>
+                                        <div class="input-group">
+                                            <input type="tel" class="form-control" name="card_number" id="card_number"
+                                                placeholder="0000 0000 0000 0000" autofocus required autocomplete="off"
+                                                maxlength="25" />
+
+                                            <script>
+                                                const cardInput = document.getElementById('card_number');
+
+                                                cardInput.addEventListener('input', function (e) {
+                                                    let value = e.target.value.replace(/\D/g, '');
+                                                    value = value.substring(0, 16); // Limitar a 16 dígitos
+                                                    // Agrupar en bloques de 4 dígitos
+                                                    let formatted = value.match(/.{1,4}/g);
+                                                    if (formatted) {
+                                                        e.target.value = formatted.join(' ');
+                                                    } else {
+                                                        e.target.value = '';
+                                                    }
+                                                });
+                                            </script>
+
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-credit-card"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="title_name">
+                                            <span id="Name">Nombre del titular</span>
+                                        </label>
+                                        <div class="form-group" style="width:100%">
+                                            <input type="text" class="form-control" id="title_name"
+                                                name="cardholder_name" required autofocus autocomplete="off"
+                                                placeholder="Nombre del titular de la tarjeta" required
+                                                autocomplete="cc-name" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-7 col-md-7">
+                                    <div class="form-group">
+                                        <label for="cardExpiry">
+                                            <span id="Name">Fecha Exp.</span>
+                                            <span class="hidden-xs hidden-sm hidden-md">
+                                                <span id="Date_Expire">
+                                                </span>
+                                            </span>
+                                        </label>
+                                        <input type="tel" class="form-control" name="cardExpiry" id="cardExpiry"
+                                            placeholder="MM/AA" autocomplete="cc-exp"
+                                            pattern="^(0[1-9]|1[0-2])\/?([0-9]{2})$" maxlength="5" required />
+
+                                        <script>
+                                            const expiryInput = document.getElementById('cardExpiry');
+
+                                            expiryInput.addEventListener('input', function (e) {
+                                                let value = e.target.value.replace(/\D/g, ''); // Solo números
+                                                if (value.length > 2) {
+                                                    value = value.slice(0, 2) + '/' + value.slice(2, 4);
+                                                }
+                                                e.target.value = value;
+                                            });
+                                        </script>
+
+                                    </div>
+                                </div>
+                                <div class="col-xs-5 col-md-5 pull-right">
+                                    <div class="form-group">
+                                        <label for="cardCVC">
+                                            <span id="Name">CVC</span>
+                                            <span class="hidden-xs hidden-sm hidden-md">
+                                                <span id="Code_CVC">
+                                                </span>
+                                            </span>
+                                            <span class="visible-xs-inline visible-sm-inline visible-md-inline">
+                                                <span id="Code_CVC_xs">
+                                                </span>
+                                            </span>
+                                        </label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" name="cardCVC"
+                                                autocomplete="cc-csc" id="cardCVC" required />
+
+                                            <span class="input-group-addon" id="help_cvv">
+                                                <i class="fa fa-question-circle"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tooltip de ayuda con imagen -->
+                                    <div class="image_help" id="image_help_div">
+                                        <img id="imagen_ayuda" src="/Images/CVV_VISA_MASTER_MOBILE.png"
+                                            alt="Ayuda CVV" />
+                                    </div>
+
+                                    <!-- Script para mostrar/ocultar con clase -->
+                                    <script>
+                                        const helpTrigger = document.getElementById("help_cvv");
+                                        const helpTooltip = document.getElementById("image_help_div");
+
+                                        helpTrigger.addEventListener("mouseenter", () => {
+                                            helpTooltip.classList.add("show");
+                                        });
+
+                                        helpTrigger.addEventListener("mouseleave", () => {
+                                            helpTooltip.classList.remove("show");
+                                        });
+                                    </script>
+                                </div>
+                            </div>
+
+                            <div id="div_email_client" class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="email">
+                                            <span id="Name">Correo electrónico</span>
+                                            <span id="Email_title"></span>
+                                        </label>
+                                        <input type="text" class="form-control" autocomplete="off" id="email"
+                                            name="email_client" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="display:none">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="cellphone"><span id="Phonetitle"></span></label>
+                                        <input type="tel" class="form-control" autocomplete="off" maxlength="10"
+                                            id="cellphone" name="cellphone" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="hidden-xs"></div>
+                                <div class="col-xs-12"><img
+                                        style="max-width: 150px; position: relative; top: -10px; margin-bottom: -17px;"
+                                        src="/images/visa_master_logo.png" /></div>
+                                <div class="col-xs-12">
+                                    <span style="font-size: 12px;" id="message">Su pago se realizará de forma segura con
+                                        encriptación TLS 2.1</span>
+                                </div>
+
+                                <div class="col-xs-12" style="MARGIN-TOP: 7px;">
+                                    <button id="buttom_pay" class="subscribe btn btn-default btn-lg btn-block"
+                                        style="background-color: #205F7A; color: #fff; font-weight: 500;" type="button">
+                                        <span id="name_buttom_pay"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row" style="display:none;">
+                                <div class="col-xs-12">
+                                    <p class="payment-errors"></p>
+                                </div>
+                            </div>
+                            <div class="container preload" id="card_view" style="display:none;">
+                                <div class="creditcard">
+                                    <div class="front">
+                                        <div id="ccsingle"></div>
+                                        <svg version="1.1" id="cardfront" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 750 471" style="enable-background:new 0 0 750 471;"
+                                            xml:space="preserve">
+                                            <g id="Front">
+                                                <g id="CardBackground">
+                                                    <g id="Page-1_1_">
+                                                        <g id="amex_1_">
+                                                            <path id="Rectangle-1_1_" class="lightcolor grey" d="M40,0h670c22.1,0,40,17.9,40,40v391c0,22.1-17.9,40-40,40H40c-22.1,0-40-17.9-40-40V40
+                                                    C0,17.9,17.9,0,40,0z" />
+                                                        </g>
+                                                    </g>
+                                                    <path class="darkcolor greydark"
+                                                        d="M750,431V193.2c-217.6-57.5-556.4-13.5-750,24.9V431c0,22.1,17.9,40,40,40h670C732.1,471,750,453.1,750,431z" />
+                                                </g>
+                                                <text transform="matrix(1 0 0 1 60.106 295.0121)" id="svgnumber"
+                                                    class="st2 st3 st4">0123 4567 8910 1112</text>
+                                                <text transform="matrix(1 0 0 1 54.1064 428.1723)" id="svgname"
+                                                    class="st2 st5 st6">Afinia</text>
+                                                <text transform="matrix(1 0 0 1 54.1074 389.8793)"
+                                                    class="st7 st5 st8">cardholder name</text>
+                                                <text transform="matrix(1 0 0 1 479.7754 388.8793)"
+                                                    class="st7 st5 st8">expiration</text>
+                                                <text transform="matrix(1 0 0 1 65.1054 241.5)" class="st7 st5 st8">card
+                                                    number</text>
+                                                <g>
+                                                    <text transform="matrix(1 0 0 1 574.4219 433.8095)" id="svgexpire"
+                                                        class="st2 st5 st9">01/23</text>
+                                                    <text transform="matrix(1 0 0 1 479.3848 417.0097)"
+                                                        class="st2 st10 st11">VALID</text>
+                                                    <text transform="matrix(1 0 0 1 479.3848 435.6762)"
+                                                        class="st2 st10 st11">THRU</text>
+                                                    <polygon class="st2"
+                                                        points="554.5,421 540.4,414.2 540.4,427.9 		" />
+                                                </g>
+                                                <g id="cchip">
+                                                    <g>
+                                                        <path class="st2"
+                                                            d="M168.1,143.6H82.9c-10.2,0-18.5-8.3-18.5-18.5V74.9c0-10.2,8.3-18.5,18.5-18.5h85.3
+                                                c10.2,0,18.5,8.3,18.5,18.5v50.2C186.6,135.3,178.3,143.6,168.1,143.6z" />
+                                                    </g>
+                                                    <g>
+                                                        <g>
+                                                            <rect x="82" y="70" class="st12" width="1.5" height="60" />
+                                                        </g>
+                                                        <g>
+                                                            <rect x="167.4" y="70" class="st12" width="1.5"
+                                                                height="60" />
+                                                        </g>
+                                                        <g>
+                                                            <path class="st12" d="M125.5,130.8c-10.2,0-18.5-8.3-18.5-18.5c0-4.6,1.7-8.9,4.7-12.3c-3-3.4-4.7-7.7-4.7-12.3
+                                                    c0-10.2,8.3-18.5,18.5-18.5s18.5,8.3,18.5,18.5c0,4.6-1.7,8.9-4.7,12.3c3,3.4,4.7,7.7,4.7,12.3
+                                                    C143.9,122.5,135.7,130.8,125.5,130.8z M125.5,70.8c-9.3,0-16.9,7.6-16.9,16.9c0,4.4,1.7,8.6,4.8,11.8l0.5,0.5l-0.5,0.5
+                                                    c-3.1,3.2-4.8,7.4-4.8,11.8c0,9.3,7.6,16.9,16.9,16.9s16.9-7.6,16.9-16.9c0-4.4-1.7-8.6-4.8-11.8l-0.5-0.5l0.5-0.5
+                                                    c3.1-3.2,4.8-7.4,4.8-11.8C142.4,78.4,134.8,70.8,125.5,70.8z" />
+                                                        </g>
+                                                        <g>
+                                                            <rect x="82.8" y="82.1" class="st12" width="25.8"
+                                                                height="1.5" />
+                                                        </g>
+                                                        <g>
+                                                            <rect x="82.8" y="117.9" class="st12" width="26.1"
+                                                                height="1.5" />
+                                                        </g>
+                                                        <g>
+                                                            <rect x="142.4" y="82.1" class="st12" width="25.8"
+                                                                height="1.5" />
+                                                        </g>
+                                                        <g>
+                                                            <rect x="142" y="117.9" class="st12" width="26.2"
+                                                                height="1.5" />
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                            <g id="Back">
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="back">
+                                        <svg version="1.1" id="cardback" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 750 471" style="enable-background:new 0 0 750 471;"
+                                            xml:space="preserve">
+                                            <g id="Front">
+                                                <line class="st0" x1="35.3" y1="10.4" x2="36.7" y2="11" />
+                                            </g>
+                                            <g id="Back">
+                                                <g id="Page-1_2_">
+                                                    <g id="amex_2_">
+                                                        <path id="Rectangle-1_2_" class="darkcolor greydark" d="M40,0h670c22.1,0,40,17.9,40,40v391c0,22.1-17.9,40-40,40H40c-22.1,0-40-17.9-40-40V40
+                                                C0,17.9,17.9,0,40,0z" />
+                                                    </g>
+                                                </g>
+                                                <rect y="61.6" class="st2" width="750" height="78" />
+                                                <g>
+                                                    <path class="st3" d="M701.1,249.1H48.9c-3.3,0-6-2.7-6-6v-52.5c0-3.3,2.7-6,6-6h652.1c3.3,0,6,2.7,6,6v52.5
+                                            C707.1,246.4,704.4,249.1,701.1,249.1z" />
+                                                    <rect x="42.9" y="198.6" class="st4" width="664.1" height="10.5" />
+                                                    <rect x="42.9" y="224.5" class="st4" width="664.1" height="10.5" />
+                                                    <path class="st5"
+                                                        d="M701.1,184.6H618h-8h-10v64.5h10h8h83.1c3.3,0,6-2.7,6-6v-52.5C707.1,187.3,704.4,184.6,701.1,184.6z" />
+                                                </g>
+                                                <text transform="matrix(1 0 0 1 621.999 227.2734)" id="svgsecurity"
+                                                    class="st6 st7">985</text>
+                                                <g class="st8">
+                                                    <text transform="matrix(1 0 0 1 518.083 280.0879)"
+                                                        class="st9 st6 st10">security code</text>
+                                                </g>
+                                                <rect x="58.1" y="378.6" class="st11" width="375.5" height="13.5" />
+                                                <rect x="58.1" y="405.6" class="st11" width="421.7" height="13.5" />
+                                                <text transform="matrix(1 0 0 1 59.5073 228.6099)" id="svgnameback"
+                                                    class="st12 st13">Afinia</text>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="hidden" id="total_amount" />
+                        <input type="hidden" id="UrlResultOk" />
+                        <input type="hidden" id="UrlResultNotOk" />
+                        <input type="hidden" id="TokenID" name="TokenID" />
+                        <input type="hidden" id="threeDSServerTransID" name="threeDSServerTransID" />
+                        <input type="hidden" id="acsTransID" name="acsTransID" />
+                        <input type="hidden" id="acsURL" name="acsURL" />
+                        <input type="hidden" id="formtype" name="formtype" value="PaymentForm_V4" />
+
+                        <div class="panel-body" id="success" style="display:none">
+                            <div class="row">
+                                <center>
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <span style="font-size:large">
+                                            <b>Monto:</b>
+                                            <b><span id="success_amount">₡3,940,00</span></b>
+                                        </span>
+                                    </div>
+                                </center>
+
+                                <div style="margin-top:50px;"></div>
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="checkmark" id="check_procesado" style="max-width:150px">
+                                        <div class="animation-ctn">
+                                            <div class="icon icon--order-success svg">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="154px" height="154px">
+                                                    <g fill="none" stroke="#22AE73" stroke-width="2">
+                                                        <circle cx="77" cy="77" r="72"
+                                                            style="stroke-dasharray:480px, 480px; stroke-dashoffset: 960px;">
+                                                        </circle>
+                                                        <circle id="colored" fill="#22AE73" cx="77" cy="77" r="72"
+                                                            style="stroke-dasharray:480px, 480px; stroke-dashoffset: 960px;">
+                                                        </circle>
+                                                        <polyline class="st0" stroke="#fff" stroke-width="10"
+                                                            points="43.5,77.8 63.7,97.9 112.2,49.4"
+                                                            style="stroke-dasharray:100px, 100px; stroke-dashoffset: 200px;" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:30px;">
+                                    <span style="font-size:large"><b>¡Transacción realizada con éxito!</b></span>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:30px;">
+                                    <span><b>Número de Autorización:</b></span>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <span id="autoritation_no">222222222</span>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:30px;">
+                                    <span><b>Fecha:</b></span>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <span id="transactiondate">09/08/2018 13:05:00</span>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:20px;">
+                                    <button class="btn btn-default btn-lg" id="continue_s" style="
+                                        background-color: #c1c7c7; width: 100%;" type="button">
+                                        <span id="name_buttom_continue"></span>
+                                    </button>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:20px;">
+                                    <img src="/images/logopp.png" style="max-width: 171px;" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-body" id="declined" style="display:none">
+                            <div class="row">
+                                <center>
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <span style="font-size:large">
+                                            <b>Monto:</b>
+                                            <b>
+                                                <span id="declined_amount">₡3,940,00</span>
+                                            </b>
+                                        </span>
+                                    </div>
+                                </center>
+
+                                <div style="margin-top:50px;"></div>
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="animation-ctn">
+                                        <div class="icon icon--order-success svg">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="154px" height="154px">
+                                                <g fill="none" stroke="#F44812" stroke-width="2">
+                                                    <circle cx="77" cy="77" r="72" style="stroke-dasharray:480px,
+                                        480px; stroke-dashoffset: 960px;"></circle>
+                                                    <circle id="colored" fill="#F44812" cx="77" cy="77" r="
+                                        72" style="stroke-dasharray:480px, 480px; stroke-dashoffset: 960px;">
+                                                    </circle>
+                                                    <polyline class="st0" stroke="#fff" stroke-width="10" points="
+                                        43.5,77.8 112.2,77.8" style="stroke-dasharray:100px, 100px; stroke-dashoffset:
+                                        200px;" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:30px;">
+                                    <span style="font-size:large"><b>Su transacción ha sido rechazada</b>
+                                    </span>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <span style="font-size:large">Verifique su método de pago y/o contacte al banco
+                                        emisor </span>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:30px;">
+                                    <span> <b>Fecha:</b></span>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <span id="transactiondatedeclined">09/08/2018 13:05:00</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:20px;">
+                                    <button id="continue_d" class="btn btn-default btn-lg" style="
+                                        background-color: #c1c7c7; width: 100%;" type="button">
+                                        <span id="
+                                        name_buttom_continue_d">
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:20px;">
+
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:50px;">
+                                    <img src="/images/logopp.png" style="max-width: 171px;" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-body" id="comunication" style="display:none">
+                            <div class="row">
+                                <center>
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <span style="font-size:large">
+                                            <b>Monto: </b>
+                                            <b>
+                                                <span id="comunication_amount">₡3,940,00</span>
+                                            </b>
+                                        </span>
+                                    </div>
+                                </center>
+
+                                <div style="margin-top:50px;"></div>
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="animation-ctn">
+                                        <div class="icon icon--order-success svg">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="154px" height="154px">
+                                                <g fill="none" stroke="#F44812" stroke-width="2">
+                                                    <circle cx="77" cy="77" r="72"
+                                                        style="stroke-dasharray:480px, 480px; stroke-dashoffset: 960px;">
+                                                    </circle>
+                                                    <circle id="colored" fill="#F44812" cx="77" cy="77" r="72"
+                                                        style="stroke-dasharray:480px, 480px; stroke-dashoffset: 960px;">
+                                                    </circle>
+                                                    <polyline class="st0" stroke="#fff" stroke-width="10"
+                                                        points="43.5,77.8 112.2,77.8"
+                                                        style="stroke-dasharray:100px, 100px; stroke-dashoffset: 200px;" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:30px;">
+                                    <span style="font-size:large">
+                                        <b>Error de comunicación con la entidad financiera</b>
+                                    </span>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <span style="font-size:large">Por favor intente nuevamente</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:30px;">
+                                    <span><b>Fecha:</b></span>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <span id="transactiondatecomunication">09/08/2018 13:05:00</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:20px;">
+                                    <button class="btn btn-default btn-lg" id="continue_c" style="
+                                        background-color: #c1c7c7; width: 100%;" type="button">
+                                        <span id="name_buttom_continue_c"></span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:50px;">
+                                    <img src="/Images/logopp.png" style="max-width: 171px;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </form>
+</body>
+
+</html>

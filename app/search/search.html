@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bus booking</title>
+    <meta name='robots' content='max-image-preview:small' />
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/css/seats.css" media="all">
+    <link rel="stylesheet" href="/css/ekiticons.css" media="all" />
+    <link rel="stylesheet" href="/css/fadeIn.min.css" media="all" />
+    <link rel="stylesheet" href="/css/frontend.min.css" media="all" />
+    <link rel="stylesheet" href="/css/header-footer-elementor.css" media="all" />
+    <link rel="stylesheet" href="/css/post_1.css" media="all" />
+    <link rel="stylesheet" href="/css/post_2.css" media="all" />
+    <link rel="stylesheet" href="/css/post_3.css" media="all" />
+    <link rel='stylesheet' href='/css/post-28.css' media='all' />
+    <link rel='stylesheet' href='/css/post-954.css' media='all' />
+    <link rel="stylesheet" href="/css/style.css" media="all" />
+    <link rel="stylesheet" href="/css/style.min.css" media="all" />
+    <link rel="stylesheet" href="/css/style3.css" media="all" />
+    <link rel="stylesheet" href="/css/swiper.min.css" media="all" />
+    <link rel="stylesheet" href="/css/widget-counter.min.css" media="all" />
+    <link rel="stylesheet" href="/css/widget-icon-list.min.css" media="all" />
+    <link rel="stylesheet" href="/css/widget-styles.css" media="all" />
+    <link rel="stylesheet" href="/css/jost.css" media="all" />
+    <link rel="stylesheet" href="/css/search.css" media="all" />
+    <link rel="stylesheet" href="/css/seats.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/ui.js"></script>
+
+</head>
+
+<body class="elementor-kit-28">
+    <div id="page" class="hfeed site">
+
+        <header id="masthead" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
+            <!-- Header dinámico -->
+        </header>
+
+        <div id="custom-notification" class="notification-blur">
+            <p id="notification-message">Mensaje de notificación</p>
+        </div>
+
+        <transparent>
+            <window id="window-send-suggestion" data-flip-id="animate">
+                <!-- Modal -->
+                <div role="document" class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title modal-title-tig">Elegir asiento</h4>
+                            <!-- Botón de cierre -->
+                            <button onclick="toggleWindow();" id="close-modal" aria-label="Close"
+                                class="btn_close">&times;
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <h5 class="title-seat-number mb-4">
+                                    Piso #1: seleccione hasta 5 asiento(s) por
+                                    ruta
+                                </h5>
+                                <div class="bus_wrap">
+                                    <div class="wheel_bus"></div>
+                                    <h5 class="title-bus-level">
+                                        Ventana
+                                    </h5>
+                                    <div class="wheel_bus"></div>
+                                </div>
+
+                                <!-- Modal -->
+                                <transparent id="modal-backdrop">
+                                    <window id="popup-hola" class="window">
+
+                                        <!-- Encabezado con título y botón cerrar -->
+                                        <div class="modal2_header">
+                                            <h5 class="modal-title">Selección de Tiquete</h5>
+                                        </div>
+
+                                        <!-- Formulario de selección -->
+                                        <form id="ticket-form" class="modal-form">
+                                            <label class="mb_rb">
+                                                <input type="radio" name="ticketType" value="normal" checked> Normal
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="ticketType" value="adulto"> Adulto Mayor
+                                            </label>
+                                            <!-- Campo de cédula para Adulto Mayor (inicialmente oculto) -->
+                                            <div id="cedula-container" class="cedula-container">
+                                                <div id="cedula-error" class="error-message"></div>
+                                                <input type="text" id="cedula" name="cedula"
+                                                    placeholder="Número de identificación">
+                                            </div>
+                                        </form>
+
+                                        <!-- Botones de acción -->
+                                        <div class="modal-actions">
+                                            <button type="button" class="btn gray xsmall" id="modalAddButton"
+                                                disabled>Agregar</button>
+                                        </div>
+
+                                    </window>
+                                </transparent>
+
+
+
+
+                                <div class="row justify-content-end mb-4 mb-lg-0">
+                                    <div class="col-md-12">
+                                        <div class="seat-normal-leves show-caption-seat vision_bus">
+                                            <div class="seat-container-leves">
+                                                <div class="seat-row-leves">
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            57
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            52
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            48
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            46
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            42
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            38
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            34
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            32
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            28
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            24
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            20
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            16
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            12
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            8
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-special">
+                                                            4
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="seat-row-leves">
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            56
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            51
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            47
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            45
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            41
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            37
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            33
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            31
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            27
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            23
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            19
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            15
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            11
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            7
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-special">
+                                                            3
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="seat-row-leves">
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            55
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                    </div>
+                                                </div>
+                                                <div class="seat-row-leves">
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            54
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            50
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            44
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            40
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            36
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            30
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            26
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            22
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            17
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            14
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            10
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            6
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-special">
+                                                            2
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="seat-row-leves">
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            53
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            49
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            43
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            39
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            35
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-wheel">
+                                                            SR
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            29
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            25
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            21
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            18
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            13
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            9
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-normal">
+                                                            5
+                                                        </button>
+                                                    </div>
+                                                    <div class="seat-btn-normal">
+                                                        <button onclick="toggleWindow('#popup-hola')" type="button"
+                                                            class="btn-seat btn-border-special">
+                                                            1
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="steering-wheel">
+                                                <img src="/images/steering-wheel.png" alt="steering wheel"
+                                                    class="img-fluid" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bus_wrap">
+                                    <div class="wheel_bus"></div>
+                                    <h5 class="title-bus-level">
+                                        Ventana
+                                    </h5>
+                                    <div class="wheel_bus"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-12 align-self-center">
+                                        <div class="row g-3 mb-3">
+                                            <div _ngcontent-ng-c350635866=""
+                                                class="col-12 col-sm-4 col-lg align-self-center">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="seat-caption-available">
+                                                    </div>
+                                                    <h5 class="mb-0 seat-caption">
+                                                        Asiento
+                                                        disponible
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div _ngcontent-ng-c350635866=""
+                                                class="col-12 col-sm-4 col-lg align-self-center">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="seat-caption-occupied">
+                                                    </div>
+                                                    <h5 class="mb-0 seat-caption">
+                                                        Asiento
+                                                        ocupado
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div _ngcontent-ng-c350635866=""
+                                                class="col-12 col-sm-4 col-lg align-self-center">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="seat-caption-selected">
+                                                    </div>
+                                                    <h5 class="mb-0 seat-caption">
+                                                        Asiento a
+                                                        elegir
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div _ngcontent-ng-c350635866=""
+                                                class="col-12 col-sm-4 col-lg align-self-center">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="seat-caption-special-needs">
+                                                    </div>
+                                                    <h5 class="mb-0 seat-caption">
+                                                        Asiento
+                                                        especial
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div _ngcontent-ng-c350635866=""
+                                                class="col-12 col-sm-4 col-lg align-self-center">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="seat-caption-wheel">
+                                                        SR</div>
+                                                    <h5 class="mb-0 seat-caption">
+                                                        Silla de
+                                                        ruedas
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-actions">
+                                        <a href="/app/ticket/ticket.html" id="acceptLink" type="button"
+                                            class="btn gray xsmall">
+                                            Aceptar
+                                        </a>
+                                        <button type="button" class="btn gray xsmall" id="clearSeatsBtn">
+                                            Limpiar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </window>
+        </transparent>
+
+        <!-- Main -->
+        <main class="main" role="main">
+            <!-- Search -->
+            <div class="advanced-search color">
+                <div class="wrap">
+                    <form id="customForm">
+
+                        <div class="mf-input-wrapper">
+                            <label for="select_1" class="mf-input-label">De</label>
+                            <small>Lugar de salida</small>
+                            <div class="select_div">
+                                <select id="select_1" class="mf-select">
+                                    <option value="" disabled selected hidden>Seleccione una ubicación</option>
+                                    <option value="San José">San José</option>
+                                </select>
+                                <div class="select-icon">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mf-input-wrapper">
+                            <label for="select_2" class="mf-input-label">Hasta</label>
+                            <small>Lugar de llegada</small>
+                            <div class="select_div">
+                                <select id="select_2" class="mf-select">
+                                    <option value="" disabled selected hidden>Seleccione una ubicación</option>
+                                    <!-- Las opciones de destinos serán agregadas dinámicamente -->
+                                </select>
+                                <div class="select-icon">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mf-input-wrapper">
+                            <label class="mf-input-label" for="date">Fecha</label>
+                            <small>Fecha de viaje</small>
+                            <input type="date" id="date" name="date" class="mf-input" placeholder="Fecha" />
+                        </div>
+
+                        <div class="mf-input-wrapper">
+                            <label for="time" class="mf-input-label">Horario</label>
+                            <div class="select_div">
+                                <select id="time" name="time" class="mf-select">
+                                    <option value="" disabled selected hidden>Seleccione el horario</option>
+                                    <!-- Las opciones de horarios se agregarán dinámicamente -->
+                                </select>
+                                <div class="select-icon">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button id="buscarRutasBtn"
+                            class="elementor-button elementor-button-link elementor-size-sm h_size">
+                            Buscar rutas
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <!-- //Search -->
+
+            <div class="wrap">
+                <div class="row">
+                    <!--- Content -->
+                    <div class="full-width content">
+                        <h2>Rutas disponibles</h2>
+
+                        <div id="resultsContainer" class="results"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer itemtype="https://schema.org/WPFooter" itemscope="itemscope" id="colophon" role="contentinfo">
+            <!-- Footer dinámico -->
+        </footer>
+    </div>
+
+    <script src="/js/jquery.uniform.min.js"></script>
+    <script src="/js/jquery.slicknav.min.js"></script>
+    <script src="/js/wow.min.js"></script>
+    <script src="/js/scripts.js"></script>
+
+    <script src="/js/widget-scripts.js"></script>
+    <script src="/js/webpack.runtime.min.js"></script>
+    <script src="/js/frontend-modules.min.js"></script>
+
+    <script src="/js/header.js"></script>
+    <script src="/js/filter_routes_2.js"></script>
+    <script src="/js/display_routes.js"></script>
+    <script src="/js/frontend.min.js"></script>
+    <script src="/js/elementor.js"></script>
+    <script src="/app/layout/layout.js"></script>
+
+    <script src="/gsap/gsap.min.js"></script>
+    <script src="/gsap/Flip.min.js"></script>
+    <script src="/gsap/CustomEase.min.js"></script>
+    <script src="/js/ui-functions.js"></script>
+</body>
+
+</html>
