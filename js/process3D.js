@@ -625,22 +625,43 @@ $(document).ready(function () {
     });
 });
 
-/*------------ SHOW THE INFO -----------*/
+/*---------------- SHOW ALL PAYMENT DATA ---------------------*/
 
-document.addEventListener("DOMContentLoaded", function () {
-  const totalAmount = sessionStorage.getItem("totalAmount");
-  const codigoReferencia = sessionStorage.getItem("codigoReferencia");
+$(document).ready(function () {
+  // Simulación de datos
+  var valuewithid = "655682";
+  $("#total_amount").val("3940.00");
+  $("#TokenID").val("LYQUH40059");
+  $("#UrlResultOk").val("/payment-response?success=true&tk=LYQUH40059");
+  $("#UrlResultNotOk").val("/payment-response?success=false&tk=LYQUH40059");
 
-  // Mostrar total
+  // Obtener datos de sessionStorage
+  var totalAmount = sessionStorage.getItem("totalAmount");
+  var codigoReferencia = sessionStorage.getItem("codigoReferencia");
+
   if (totalAmount) {
-    const formattedNumber = Number(totalAmount).toLocaleString("es-CR", {
+    var formattedNumber = Number(totalAmount).toLocaleString("es-CR", {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     });
-    document.getElementById("totalamount").textContent = "₡ " + formattedNumber;
+
+    // Mostrar en #totalamount (si existe)
+    $("#totalamount").text("₡ " + formattedNumber);
+
+    // Mostrar en el botón según idioma
+    var userLang = navigator.language || navigator.userLanguage;
+    var lang_final = userLang.split("-")[0];
+
+    if (lang_final == "es") {
+      $("#name_buttom_pay").text("Pagar ₡ " + formattedNumber);
+    } else {
+      $("#name_buttom_pay").text("Pay ₡ " + formattedNumber);
+    }
   }
-  // Mostrar código de referencia
+
   if (codigoReferencia) {
-    document.getElementById("Order_post").textContent = codigoReferencia;
+    $("#Order_post").text(codigoReferencia);
   }
+
+  iniciarCountdown(5);
 });

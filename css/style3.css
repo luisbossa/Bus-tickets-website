@@ -508,7 +508,8 @@ body.theme-twentytwentyone .mf-input-switch .mf-input-control:checked~.mf-input-
 
 .mf-input-wrapper .mf-input,
 .mf-input-wrapper .mf-input-label {
-    vertical-align: middle
+    vertical-align: middle;
+    color: var(--c-white);
 }
 
 div.mf-input-wrapper>textarea.mf-input {

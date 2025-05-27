@@ -2700,15 +2700,23 @@ input:where([type="submit"]) {
 /*--------- CHECKBOX ---------*/
 
 /* Contenedor del checkbox */
+.check_flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 .checkbox-container {
+  width: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 30px;
   user-select: none;
+  margin-top: 0;
 }
 
 /* Oculta el input nativo */

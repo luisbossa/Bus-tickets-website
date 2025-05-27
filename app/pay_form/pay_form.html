@@ -7,16 +7,13 @@
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="expires" content="-1" />
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/css/style.css" media="all" />
     <link href="/css/payform.css" rel="stylesheet" />
     <script src="/js/jquery-3.3.1.js"></script>
     <script src="/js/process3D.js"></script>
-    <script src="/js/no_devtools.js"></script> 
-    <title>
-        Payment Form
-    </title>
+    <script src="/js/no_devtools.js"></script>
+    <title>Payment Form</title>
 </head>
 
 <body>
@@ -38,28 +35,6 @@
 
         <center>
             <div id="div_full" class="row">
-                <div id="jquery_div">
-                    <Script>
-                        $(document).ready(function () {
-                            var valuewithid = '655682';
-                            $('#total_amount').val('3940.00');
-                            $('#TokenID').val('LYQUH40059');
-                            $('#UrlResultOk').val('/payment-response?success=true&tk=LYQUH40059');
-                            $('#UrlResultNotOk').val('/payment-response?success=false&tk=LYQUH40059');
-                            var userLang = navigator.language || navigator.userLanguage;
-                            var lang_final = userLang.split('-')[0];
-                            if (lang_final == 'es') {
-                                $('#name_buttom_pay').text('Pagar ₡ 3,940,00');
-                            } else {
-                                $('#name_buttom_pay').text('Pay ₡ 3,940,00')
-                            };
-                            iniciarCountdown(5);
-                        });
-                    </Script>
-                </div>
-
-                <div id="jquery3DSecure_div"></div>
-
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="panel panel-default credit-card-box" style="max-width: 380px;position:relative;">
 
@@ -255,7 +230,7 @@
                                 <div class="col-xs-12" style="MARGIN-TOP: 7px;">
                                     <button id="buttom_pay" class="subscribe btn btn-default btn-lg btn-block"
                                         style="background-color: #205F7A; color: #fff; font-weight: 500;" type="button">
-                                        <span id="name_buttom_pay"></span>
+                                        <span id="name_buttom_pay">0</span>
                                     </button>
                                 </div>
                             </div>

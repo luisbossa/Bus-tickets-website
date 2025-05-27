@@ -333,6 +333,10 @@ h1.entry-title {
   }
 }
 
+.b_color {
+  color: var(--c-f184fe1) !important;
+}
+
 .p_top {
   padding-top: 10px !important;
 }
@@ -533,5 +537,3 @@ small {
     padding-right: 0 !important;
   }
 }
-
-

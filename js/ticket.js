@@ -63,11 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
   rutaInfoEl.textContent =
     sessionStorage.getItem("rutaDescripcion") || "No definida";
 
-
-
-
-
-    
   const tickets = JSON.parse(sessionStorage.getItem("selectedTickets")) || [];
 
   let normalCount = 0;
