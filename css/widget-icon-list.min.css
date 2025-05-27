@@ -66,6 +66,7 @@
   align-items: var(--icon-vertical-align, center);
   display: flex;
   font-size: inherit;
+  text-transform: none;
 }
 
 .elementor-widget .elementor-icon-list-icon + .elementor-icon-list-text {
