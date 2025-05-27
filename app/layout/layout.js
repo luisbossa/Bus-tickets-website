@@ -20,7 +20,7 @@ header.innerHTML = `
                             <div class="hfe-site-logo">
                                 <div class="hfe-site-logo-set">
                                     <div class="hfe-site-logo-container">
-                                        <a href="/app/index.html" class="elementor-clickable" data-elementor-open-lightbox="">
+                                        <a href="/index.html" class="elementor-clickable" data-elementor-open-lightbox="">
                                             <img 
                                                 src="/images/logo.png" 
                                                 alt="logo" 
@@ -70,7 +70,7 @@ header.innerHTML = `
                                         class="elementskit-navbar-nav elementskit-menu-po-left submenu-click-on-icon">
                                         <li id="menu-item-666"
                                             class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-666 nav-item elementskit-mobile-builder-content active"
-                                            data-vertical-menu=750px><a href="/app/"
+                                            data-vertical-menu=750px><a href="/index.html"
                                                 class="ekit-menu-nav-link active">inicio</a></li>
                                         <li id="menu-item-667"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-667 nav-item elementskit-mobile-builder-content"

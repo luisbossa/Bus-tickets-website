@@ -17,7 +17,7 @@ function iniciarCountdown(e) {
       clearInterval(intervalcont);
       mostrarNotificacion("Su tiempo para realizar el pago ha expirado.");
       setTimeout(() => {
-        window.location.href = "/app/index.html";
+        window.location.href = "/index.html";
       }, 4000);
     }
   }, 1000);
