@@ -157,7 +157,7 @@
 .elementor-119
   .elementor-element.elementor-element-ade3a7f
   .mf_multiselect__menu-notice--no-options:focus {
-  background-color: var(--c-f184fe1);
+  background-color: var(--c-darkish);
 }
 
 .elementor-119 .elementor-element.elementor-element-ade3a7f .mf-input-label {
@@ -349,7 +349,7 @@
   .mf_multiselect__option {
   border-style: solid;
   border-width: 1px 1px 1px 1px;
-  border-color: var(--c-f184fe1);
+  border-color: var(--c-darkish);
 }
 
 .elementor-119 .elementor-element.elementor-element-ade3a7f .mf-input:hover,
@@ -664,7 +664,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   )::-webkit-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
@@ -672,7 +672,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   )::-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
@@ -680,7 +680,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   ):-ms-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
@@ -688,43 +688,43 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   ):-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-ade3a7f
   .mf-time-input::before {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-ade3a7f
   .mf-input::-webkit-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-ade3a7f
   .mf-input::-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-ade3a7f
   .mf-input:-ms-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-ade3a7f
   .mf-input:-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-ade3a7f
   :is(.mf_select__placeholder, .mf_multiselect__placeholder) {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119 .elementor-element.elementor-element-c8b15db {
@@ -835,7 +835,7 @@
 .elementor-119
   .elementor-element.elementor-element-acab726
   .mf_multiselect__menu-notice--no-options:focus {
-  background-color: var(--c-f184fe1);
+  background-color: var(--c-darkish);
 }
 
 .elementor-119 .elementor-element.elementor-element-acab726 .mf-input-label {
@@ -1027,7 +1027,7 @@
   .mf_multiselect__option {
   border-style: solid;
   border-width: 1px 1px 1px 1px;
-  border-color: var(--c-f184fe1);
+  border-color: var(--c-darkish);
 }
 
 .elementor-119 .elementor-element.elementor-element-acab726 .mf-input:hover,
@@ -1342,7 +1342,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   )::-webkit-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
@@ -1350,7 +1350,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   )::-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
@@ -1358,7 +1358,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   ):-ms-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
@@ -1366,43 +1366,43 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   ):-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-acab726
   .mf-time-input::before {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-acab726
   .mf-input::-webkit-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-acab726
   .mf-input::-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-acab726
   .mf-input:-ms-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-acab726
   .mf-input:-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-acab726
   :is(.mf_select__placeholder, .mf_multiselect__placeholder) {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119 .elementor-element.elementor-element-b1cd0c9 {
@@ -1705,7 +1705,7 @@
   .mf_multiselect__option {
   border-style: solid;
   border-width: 1px 1px 1px 1px;
-  border-color: var(--c-f184fe1);
+  border-color: var(--c-darkish);
 }
 
 .elementor-119 .elementor-element.elementor-element-caec218 .mf-input:hover,
@@ -1791,7 +1791,7 @@
   .mf_multiselect__menu-notice--no-options:hover {
   border-style: solid;
   border-width: 1px 1px 1px 1px;
-  border-color: var(--c-f184fe1);
+  border-color: var(--c-darkish);
 }
 
 .elementor-119 .elementor-element.elementor-element-caec218 .mf-input:focus,
@@ -1893,7 +1893,7 @@
   .mf_multiselect__menu-notice--no-options:focus {
   border-style: solid;
   border-width: 1px 1px 1px 1px;
-  border-color: var(--c-f184fe1);
+  border-color: var(--c-darkish);
 }
 
 .elementor-119 .elementor-element.elementor-element-caec218 .mf-input,
@@ -2024,7 +2024,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   )::-webkit-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
@@ -2032,7 +2032,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   )::-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
@@ -2040,7 +2040,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   ):-ms-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
@@ -2048,43 +2048,43 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   ):-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-caec218
   .mf-time-input::before {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-caec218
   .mf-input::-webkit-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-caec218
   .mf-input::-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-caec218
   .mf-input:-ms-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-caec218
   .mf-input:-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-caec218
   :is(.mf_select__placeholder, .mf_multiselect__placeholder) {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119 .elementor-element.elementor-element-cb3f97b {
@@ -2406,7 +2406,7 @@
   .mf_multiselect__option {
   border-style: solid;
   border-width: 1px 1px 1px 1px;
-  border-color: var(--c-f184fe1);
+  border-color: var(--c-darkish);
 }
 
 .elementor-119 .elementor-element.elementor-element-5f3eb3b .mf-input:hover,
@@ -2492,7 +2492,7 @@
   .mf_multiselect__menu-notice--no-options:hover {
   border-style: solid;
   border-width: 1px 1px 1px 1px;
-  border-color: var(--c-f184fe1);
+  border-color: var(--c-darkish);
 }
 
 .elementor-119 .elementor-element.elementor-element-5f3eb3b .mf-input:focus,
@@ -2594,7 +2594,7 @@
   .mf_multiselect__menu-notice--no-options:focus {
   border-style: solid;
   border-width: 1px 1px 1px 1px;
-  border-color: var(--c-f184fe1);
+  border-color: var(--c-darkish);
 }
 
 .elementor-119 .elementor-element.elementor-element-5f3eb3b .mf-input,
@@ -2725,7 +2725,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   )::-webkit-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
@@ -2733,7 +2733,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   )::-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
@@ -2741,7 +2741,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   ):-ms-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
@@ -2749,43 +2749,43 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   ):-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-5f3eb3b
   .mf-time-input::before {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-5f3eb3b
   .mf-input::-webkit-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-5f3eb3b
   .mf-input::-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-5f3eb3b
   .mf-input:-ms-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-5f3eb3b
   .mf-input:-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-5f3eb3b
   :is(.mf_select__placeholder, .mf_multiselect__placeholder) {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119 .elementor-element.elementor-element-d91ab7c {
@@ -3088,7 +3088,7 @@
   .mf_multiselect__option {
   border-style: solid;
   border-width: 1px 1px 1px 1px;
-  border-color: var(--c-f184fe1);
+  border-color: var(--c-darkish);
 }
 
 .elementor-119 .elementor-element.elementor-element-9a891ff .mf-input:hover,
@@ -3174,7 +3174,7 @@
   .mf_multiselect__menu-notice--no-options:hover {
   border-style: solid;
   border-width: 1px 1px 1px 1px;
-  border-color: var(--c-f184fe1);
+  border-color: var(--c-darkish);
 }
 
 .elementor-119 .elementor-element.elementor-element-9a891ff .mf-input:focus,
@@ -3276,7 +3276,7 @@
   .mf_multiselect__menu-notice--no-options:focus {
   border-style: solid;
   border-width: 1px 1px 1px 1px;
-  border-color: var(--c-f184fe1);
+  border-color: var(--c-darkish);
 }
 
 .elementor-119 .elementor-element.elementor-element-9a891ff .mf-input,
@@ -3407,7 +3407,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   )::-webkit-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
@@ -3415,7 +3415,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   )::-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
@@ -3423,7 +3423,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   ):-ms-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
@@ -3431,43 +3431,43 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   ):-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-9a891ff
   .mf-time-input::before {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-9a891ff
   .mf-input::-webkit-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-9a891ff
   .mf-input::-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-9a891ff
   .mf-input:-ms-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-9a891ff
   .mf-input:-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119
   .elementor-element.elementor-element-9a891ff
   :is(.mf_select__placeholder, .mf_multiselect__placeholder) {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-119 .elementor-element.elementor-element-f27e7c7 {

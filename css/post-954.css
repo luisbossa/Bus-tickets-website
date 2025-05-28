@@ -7,7 +7,7 @@
   --c-bf890a9: #286883;
   --c-lightgreen: #55899e;
   --c-gray: #ccc;
-  --c-f184fe1: #3d3d3d;
+  --c-darkish: #3d3d3d;
   --c-ce1effd: #e22d2d;
   --c-2d81040: #e2d52d;
   --c-mate: #02010100;
@@ -818,8 +818,8 @@
   --border-right-width: 1px;
   --border-bottom-width: 1px;
   --border-left-width: 1px;
-  border-color: var(--c-f184fe1);
-  --border-color: var(--c-f184fe1);
+  border-color: var(--c-darkish);
+  --border-color: var(--c-darkish);
   --border-radius: 20px;
   --margin-top: 0px;
   --margin-bottom: 0px;
@@ -918,8 +918,8 @@
   --border-right-width: 1px;
   --border-bottom-width: 1px;
   --border-left-width: 1px;
-  border-color: var(--c-f184fe1);
-  --border-color: var(--c-f184fe1);
+  border-color: var(--c-darkish);
+  --border-color: var(--c-darkish);
   --border-radius: 20px;
   --margin-top: 0px;
   --margin-bottom: 0px;
@@ -1036,8 +1036,8 @@
   --border-right-width: 1px;
   --border-bottom-width: 1px;
   --border-left-width: 1px;
-  border-color: var(--c-f184fe1);
-  --border-color: var(--c-f184fe1);
+  border-color: var(--c-darkish);
+  --border-color: var(--c-darkish);
   --border-radius: 20px;
   --margin-top: 0px;
   --margin-bottom: 0px;
@@ -1136,8 +1136,8 @@
   --border-right-width: 1px;
   --border-bottom-width: 1px;
   --border-left-width: 1px;
-  border-color: var(--c-f184fe1);
-  --border-color: var(--c-f184fe1);
+  border-color: var(--c-darkish);
+  --border-color: var(--c-darkish);
   --border-radius: 20px;
   --margin-top: 0px;
   --margin-bottom: 0px;
@@ -2191,7 +2191,7 @@
   color: var(--c-primary);
   border-style: solid;
   border-width: 2px 2px 2px 2px;
-  border-color: var(--c-f184fe1);
+  border-color: var(--c-darkish);
   border-radius: 10px 10px 10px 10px;
 }
 .elementor-954

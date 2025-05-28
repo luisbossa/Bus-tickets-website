@@ -1823,6 +1823,12 @@ body.rtl .e-con {
   .e-con.e-flex .elementor-widget-archive-posts {
     width: 100%;
   }
+
+  .elementor-51 .elementor-element.elementor-element-c64a487 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .elementor-form-fields-wrapper {

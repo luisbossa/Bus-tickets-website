@@ -623,7 +623,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   )::-webkit-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
@@ -631,7 +631,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   )::-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
@@ -639,7 +639,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   ):-ms-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
@@ -647,43 +647,43 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   ):-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-409bab0
   .mf-time-input::before {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-409bab0
   .mf-input::-webkit-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-409bab0
   .mf-input::-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-409bab0
   .mf-input:-ms-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-409bab0
   .mf-input:-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-409bab0
   :is(.mf_select__placeholder, .mf_multiselect__placeholder) {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038 .elementor-element.elementor-element-cf63097 {
@@ -1268,7 +1268,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   )::-webkit-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
@@ -1276,7 +1276,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   )::-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
@@ -1284,7 +1284,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   ):-ms-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
@@ -1292,43 +1292,43 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   ):-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-8b95674
   .mf-time-input::before {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-8b95674
   .mf-input::-webkit-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-8b95674
   .mf-input::-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-8b95674
   .mf-input:-ms-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-8b95674
   .mf-input:-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-8b95674
   :is(.mf_select__placeholder, .mf_multiselect__placeholder) {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038 .elementor-element.elementor-element-8b95674 .mf-error-message {
@@ -1927,7 +1927,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   )::-webkit-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
@@ -1935,7 +1935,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   )::-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
@@ -1943,7 +1943,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   ):-ms-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
@@ -1951,43 +1951,43 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   ):-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-211d4d7
   .mf-time-input::before {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-211d4d7
   .mf-input::-webkit-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-211d4d7
   .mf-input::-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-211d4d7
   .mf-input:-ms-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-211d4d7
   .mf-input:-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-211d4d7
   :is(.mf_select__placeholder, .mf_multiselect__placeholder) {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038 .elementor-element.elementor-element-2e1a703 {
@@ -2614,7 +2614,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   )::-webkit-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
@@ -2622,7 +2622,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   )::-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
@@ -2630,7 +2630,7 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   ):-ms-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
@@ -2638,43 +2638,43 @@
   .mf-input:not([type="submit"]):not([type="checkbox"]):not(
     [type="radio"]
   ):-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-b35b887
   .mf-time-input::before {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-b35b887
   .mf-input::-webkit-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-b35b887
   .mf-input::-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-b35b887
   .mf-input:-ms-input-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-b35b887
   .mf-input:-moz-placeholder {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 .elementor-1038
   .elementor-element.elementor-element-b35b887
   :is(.mf_select__placeholder, .mf_multiselect__placeholder) {
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
 @media (max-width: 1024px) {

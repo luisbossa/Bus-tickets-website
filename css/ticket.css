@@ -2744,7 +2744,7 @@ input:where([type="submit"]) {
 
 .check_input:checked + .checkmark::after {
   content: "✔";
-  color: var(--c-f184fe1) !important;
+  color: var(--c-darkish) !important;
   position: absolute;
   left: 5px;
   top: 0;
@@ -2890,16 +2890,17 @@ window.window {
   padding: 30px;
   background-color: #fff;
   border-radius: 12px;
-  max-width: 90%;
   box-sizing: border-box;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95;
 }
 
 /* Encabezado */
 .modal-header {
   display: flex;
-  justify-content: space-between;
   align-items: start;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--c-gray);
 }
 
 .modal-title {
@@ -2918,29 +2919,12 @@ window.window {
   }
 }
 
-.m_footer {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  padding-top: 15px;
-}
-
 .m_body {
-  max-height: 50vh;
   overflow-y: auto;
   margin-top: 15px;
-  border-radius: 5px;
+  padding-left: 0;
   box-sizing: border-box;
-  padding: 15px 10px 0 10px;
   background-color: var(--c-white);
-  border: 1px solid var(--c-gray);
-}
-
-@media (max-width: 768px) {
-  .m_body {
-    padding: 20px 8px 10px 8px;
-    max-height: 60vh;
-  }
 }
 
 .m_body ol {
@@ -2961,10 +2945,10 @@ window.window {
 .m_body .list-group-numbered > li::marker {
   font-weight: 700;
   font-size: 13px;
-  color: var(--c-f184fe1);
+  color: var(--c-darkish);
 }
 
-/* Agrega scroll visual mejorado (opcional) */
+/* Agrega scroll visual mejorado */
 .m_body::-webkit-scrollbar {
   width: 8px;
 }
@@ -2972,4 +2956,19 @@ window.window {
 .m_body::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 3px;
+}
+
+.m_footer {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-top: 15px;
+  border-top: 1px solid var(--c-gray);
+}
+
+@media (max-width: 768px) {
+  .m_body {
+    padding: 10px 8px 0 0;
+    max-height: 60vh;
+  }
 }

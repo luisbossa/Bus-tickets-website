@@ -12,8 +12,6 @@
 .elementor-counter .elementor-counter-number-wrapper {
   display: flex;
   flex: 1;
-  font-size: 69px;
-  font-weight: 600;
   line-height: 1;
   text-align: center;
 }

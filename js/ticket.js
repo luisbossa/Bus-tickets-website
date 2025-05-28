@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
       clearInterval(contador);
       mostrarNotificacion("Su tiempo para realizar el pago ha expirado.");
       setTimeout(() => {
-        window.location.href = "/app/search/search.html";
+        window.location.href = "/index.html";
       }, 4000);
     }
   }
