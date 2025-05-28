@@ -532,13 +532,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // Obtener el tipo confirmado desde localStorage
         const ticketType = localStorage.getItem("currentTicketType");
 
-        if (!ticketType) {
-          mostrarNotificacion(
-            "Haz click en 'Agregar' para confirmar el tipo de tiquete seleccionado"
-          );
-          return;
-        }
-
         if (selected.length >= 5) {
           seatButtons.forEach((btn) => {
             if (!btn.classList.contains("selected")) {

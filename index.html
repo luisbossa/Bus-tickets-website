@@ -696,9 +696,9 @@
             <div class="elementor-element elementor-element-8d312e3 e-flex e-con-boxed e-con e-parent" data-id="8d312e3"
                 data-element_type="container">
                 <div class="e-con-inner">
-                    <div class="elementor-element elementor-element-b0e1e19 e-con-full e-flex e-con e-child"
+                    <div class="elementor-element elementor-element-b0e1e19 e-con-full e-flex e-con e-child lazy-bg"
                         data-id="b0e1e19" data-element_type="container"
-                        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                        data-bg="/images/bus_in.webp">
                     </div>
                     <div class="elementor-element elementor-element-43bcfaf e-con-full e-flex e-con e-child"
                         data-id="43bcfaf" data-element_type="container">
@@ -1252,6 +1252,22 @@
             <!-- Footer dinámico -->
         </footer>
     </div>
+
+    <script>
+        const lazyElements = document.querySelectorAll('.lazy-bg');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bg = entry.target.getAttribute('data-bg');
+                    entry.target.style.backgroundImage = `url(${bg})`;
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        lazyElements.forEach(el => observer.observe(el));
+    </script>
 
     <script src="/js/jquery-numerator.min.js"></script>
     <script src="/js/mediaelement-and-player.min.js"></script>
