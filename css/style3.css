@@ -3,9 +3,7 @@
   max-width: 100%;
   padding: 12px;
   height: auto;
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--c-gray);
+  border: 1px solid var(--c-gray);
   border-radius: 5px;
   background: 0 0;
   background-color: #fafafa;
@@ -15,7 +13,8 @@
   box-sizing: border-box;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 21px;
   text-align: left;
 }

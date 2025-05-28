@@ -407,17 +407,15 @@
   .elementskit-accordion
   .elementskit-card-header
   > .elementskit-btn-link {
-  background-color: var(--c-4e87b42);
   font-family: "Inter", Sans-serif;
   font-size: 20px;
   font-weight: 500;
   text-transform: none;
   line-height: 1.5em;
-  color: var(--c-mate);
   border-style: solid;
   border-width: 1px;
   border-color: var(--c-gray);
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .elementor-1150
@@ -622,17 +620,13 @@
   .elementskit-accordion
   .elementskit-card-header
   > .elementskit-btn-link {
-  background-color: var(--c-4e87b42);
   font-family: "Inter", Sans-serif;
   font-size: 20px;
   font-weight: 500;
   text-transform: none;
   line-height: 1.5em;
-  color: var(--c-mate);
-  border-style: solid;
-  border-width: 1px;
-  border-color: var(--c-gray);
-  border-radius: 5px;
+  border-radius: 10px;
+  border: 1px solid var(--c-gray);
 }
 
 .elementor-1150
@@ -1112,7 +1106,7 @@
     .elementskit-accordion
     .elementskit-card-header
     > .elementskit-btn-link {
-    font-size: 14px;
+    font-size: 16px;
   }
   .elementor-1150
     .elementor-element.elementor-element-6993b1a
@@ -1147,7 +1141,7 @@
     .elementskit-accordion
     .elementskit-card-header
     > .elementskit-btn-link {
-    font-size: 14px;
+    font-size: 16px;
   }
   .elementor-1150
     .elementor-element.elementor-element-f98fa8d

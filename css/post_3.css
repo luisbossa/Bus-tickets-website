@@ -4321,17 +4321,13 @@ body:not(.rtl)
   .elementskit-accordion
   .elementskit-card-header
   > .elementskit-btn-link {
-  background-color: var(--c-white);
   font-family: "Inter", Sans-serif;
   font-size: 20px;
   font-weight: 500;
   text-transform: none;
   line-height: 1.5em;
-  color: var(--c-mate);
-  border-style: solid;
-  border-width: 1px;
-  border-color: var(--c-gray);
-  border-radius: 5px;
+  border-radius: 10px;
+  border: 1px solid var(--c-gray);
 }
 
 .elementor-51
@@ -5667,7 +5663,7 @@ body:not(.rtl)
     .elementor-element.elementor-element-b0e1e19
     > .elementor-motion-effects-container
     > .elementor-motion-effects-layer {
-    background-position: -106px 0px;
+    background-position: 0px 0px;
   }
   .elementor-51
     .elementor-element.elementor-element-7ac752d
@@ -5899,7 +5895,7 @@ body:not(.rtl)
     .elementskit-accordion
     .elementskit-card-header
     > .elementskit-btn-link {
-    font-size: 14px;
+    font-size: 16px;
   }
   .elementor-51
     .elementor-element.elementor-element-7cad9b0
@@ -5912,6 +5908,10 @@ body:not(.rtl)
     .elementskit-card-body {
     font-size: var(--f-text-font-size);
     line-height: var(--f-text-line-height);
+  }
+
+  .margin_both {
+    margin: 35px 0;
   }
 }
 

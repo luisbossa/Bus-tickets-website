@@ -292,6 +292,17 @@ h6 {
   display: inline-block;
 }
 
+.result_wrap {
+  width: 1170px;
+  height: auto;
+  padding: 100px 0;
+  margin: 0 auto;
+  text-align: left;
+  position: relative;
+  max-width: 94%;
+  display: inline-block;
+}
+
 .row {
   margin: 0 -15px;
 }
@@ -4208,3 +4219,49 @@ div.radio input {
     height: 116px;
   }
 }
+
+  /*------------- DATE PICKER ---------------*/
+
+  /* Estilo específico para Safari/iOS */
+  @supports (-webkit-touch-callout: none) {
+    input[type="date"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--c-gray) !important;
+      border-radius: 5px;
+      background-color: var(--c-white);
+      color: var(--c-f184fe1);
+      box-sizing: border-box;
+      font-size: 16px;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+  }
+
+  /* Estilos base para layout */
+  .date_wrap {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Placeholder simulado */
+  .placeholder-sim {
+    position: absolute;
+    left: 3px;
+    top: 74%;
+    transform: translateY(-50%);
+    text-transform: none;
+    padding: 3px 10px;
+    background-color: #FAFAFA;
+    color: var(--c-f184fe1);
+    pointer-events: none;
+    font-size: 16px;
+    z-index: 1;
+  }
+
+  /* Mover placeholder al seleccionar o enfocar */
+  .mf-input.has-value ~ .placeholder-sim,
+  .mf-input:focus ~ .placeholder-sim {
+    display: none;
+  }

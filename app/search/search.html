@@ -637,10 +637,29 @@
                         </div>
 
                         <div class="mf-input-wrapper">
-                            <label class="mf-input-label" for="date">Fecha</label>
-                            <small>Fecha de viaje</small>
-                            <input type="date" id="date" name="date" class="mf-input b_color" placeholder="Fecha" />
+                            <div class="date_wrap">
+                                <label class="mf-input-label" for="date">Fecha</label>
+                                <small>Fecha de viaje</small>
+                                <input type="date" id="date" name="date" class="mf-input b_color" />
+                                <span class="placeholder-sim">dd/mm/aaaa</span>
+                            </div>
                         </div>
+
+                        <script>
+                            const dateInput = document.getElementById('date');
+
+                            function checkValue() {
+                                if (dateInput.value) {
+                                    dateInput.classList.add('has-value');
+                                } else {
+                                    dateInput.classList.remove('has-value');
+                                }
+                            }
+                            dateInput.addEventListener('input', checkValue);
+                            dateInput.addEventListener('change', checkValue);
+
+                            checkValue();
+                        </script>
 
                         <div class="mf-input-wrapper">
                             <label for="time" class="mf-input-label">Horario</label>
@@ -664,7 +683,7 @@
             </div>
             <!-- //Search -->
 
-            <div class="wrap">
+            <div class="result_wrap">
                 <div class="row">
                     <!--- Content -->
                     <div class="full-width content">

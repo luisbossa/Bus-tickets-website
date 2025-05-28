@@ -148,12 +148,31 @@
                                                             </div>
 
                                                             <div class="mf-input-wrapper">
-                                                                <label class="mf-input-label b_color"
-                                                                    for="date">Fecha</label>
-                                                                <small>Fecha de viaje</small>
-                                                                <input type="date" id="date" name="date"
-                                                                    class="mf-input b_color" placeholder="Fecha" />
+                                                                <div class="date_wrap">
+                                                                    <label class="mf-input-label"
+                                                                        for="date">Fecha</label>
+                                                                    <small>Fecha de viaje</small>
+                                                                    <input type="date" id="date" name="date"
+                                                                        class="mf-input b_color" />
+                                                                    <span class="placeholder-sim">dd/mm/aaaa</span>
+                                                                </div>
                                                             </div>
+
+                                                            <script>
+                                                                const dateInput = document.getElementById('date');
+
+                                                                function checkValue() {
+                                                                    if (dateInput.value) {
+                                                                        dateInput.classList.add('has-value');
+                                                                    } else {
+                                                                        dateInput.classList.remove('has-value');
+                                                                    }
+                                                                }
+                                                                dateInput.addEventListener('input', checkValue);
+                                                                dateInput.addEventListener('change', checkValue);
+
+                                                                checkValue();
+                                                            </script>
 
                                                             <div class="mf-input-wrapper">
                                                                 <label for="time"
@@ -331,11 +350,12 @@
                                                 data-widget_type="image-box.default">
                                                 <div class="elementor-widget-container">
                                                     <div class="elementor-image-box-wrapper">
-                                                        <figure><img loading="lazy" fetchpriority="high"
-                                                                decoding="async" width="2509" height="2508"
-                                                                src="/images/guanacaste.webp"
-                                                                class="attachment-full size-full wp-image-519" alt=""
-                                                                sizes=" (max-width: 2509px) 100vw, 2509px" /></figure>
+                                                        <figure>
+                                                            <img loading="lazy" fetchpriority="high" decoding="async"
+                                                                width="2509" height="2508" src="/images/guanacaste.webp"
+                                                                class="attachment-full size-full wp-image-519" alt="Guanacaste"
+                                                                sizes=" (max-width: 2509px) 100vw, 2509px" />
+                                                        </figure>
                                                         <div class="elementor-image-box-content m_top">
                                                             <h3 class="elementor-image-box-title">Guanacaste</h3>
                                                         </div>
@@ -731,7 +751,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="elementor-element elementor-element-a0d63d8 e-con-full e-flex e-con e-child b_right"
+                            <div class="elementor-element elementor-element-a0d63d8 e-con-full e-flex e-con e-child b_right margin_both"
                                 data-id="a0d63d8" data-element_type="container">
                                 <div class="elementor-element elementor-element-826d9b2 elementor-position-top elementor-widget elementor-widget-image-box"
                                     data-id="826d9b2" data-element_type="widget" data-widget_type="image-box.default">
