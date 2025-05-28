@@ -529,12 +529,12 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       } else {
-        // ✅ Obtener el tipo confirmado desde localStorage
+        // Obtener el tipo confirmado desde localStorage
         const ticketType = localStorage.getItem("currentTicketType");
 
         if (!ticketType) {
           mostrarNotificacion(
-            "Por favor presiona 'Agregar' para confirmar el tipo de tiquete antes de seleccionar un asiento."
+            "Haz click en 'Agregar' para confirmar el tipo de tiquete seleccionado"
           );
           return;
         }
