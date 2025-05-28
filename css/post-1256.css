@@ -421,6 +421,9 @@ body:not(.rtl)
   i {
   color: var(--c-accent);
   transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .elementor-1256
