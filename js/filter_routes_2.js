@@ -357,7 +357,7 @@ function mostrarResultados(rutas, hora) {
           </div>
           <div class="full-width information2" style="display: none;">
             <a href="javascript:void(0)" class="close color" title="Cerrar">X</a>
-            <p><strong>Paradas principales: </strong>${ruta.descripcion}</p>
+            <p><strong>Terminales: </strong>${ruta.descripcion}</p>
           </div>
         </article>
       `;

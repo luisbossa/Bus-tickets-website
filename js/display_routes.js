@@ -162,7 +162,7 @@ if (!origen || !destino || !fecha || !hora) {
                     </div>                
                     <div class="full-width information">
                         <a href="javascript:void(0)" class="close color" title="Cerrar">X</a>
-                        <p><strong>Paradas principales: </strong>${
+                        <p><strong>Terminales: </strong>${
                           ruta.descripcion
                         }</p>
                     </div>

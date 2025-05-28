@@ -4066,9 +4066,6 @@ div.radio input {
     padding: 25px 30px 20px;
     border-bottom: none;
   }
-  .result .price {
-    padding-top: 5px;
-  }
   .result .meta {
     padding-top: 24px;
   }
@@ -4105,6 +4102,13 @@ div.radio input {
   }
   .gmap {
     height: 300px;
+  }
+  .result ul {
+    height: 90px;
+  }
+  .result .one-fourth > div {
+    padding: 30px 20px;
+    height: auto;
   }
 }
 
@@ -4220,48 +4224,49 @@ div.radio input {
   }
 }
 
-  /*------------- DATE PICKER ---------------*/
+/*------------- DATE PICKER ---------------*/
 
-  /* Estilo específico para Safari/iOS */
-  @supports (-webkit-touch-callout: none) {
-    input[type="date"] {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid var(--c-gray) !important;
-      border-radius: 5px;
-      background-color: var(--c-white);
-      color: var(--c-f184fe1);
-      box-sizing: border-box;
-      font-size: 16px;
-      appearance: none;
-      -webkit-appearance: none;
-    }
-  }
-
-  /* Estilos base para layout */
-  .date_wrap {
-    position: relative;
+/* Estilo específico para Safari/iOS */
+@supports (-webkit-touch-callout: none) {
+  input[type="date"] {
     width: 100%;
-    max-width: 100%;
-  }
-
-  /* Placeholder simulado */
-  .placeholder-sim {
-    position: absolute;
-    left: 3px;
-    top: 74%;
-    transform: translateY(-50%);
-    text-transform: none;
-    padding: 3px 10px;
-    background-color: #FAFAFA;
+    height: 49px;
+    padding: 12px;
+    border: 1px solid var(--c-gray) !important;
+    border-radius: 5px;
+    background-color: #fafafa;
     color: var(--c-f184fe1);
-    pointer-events: none;
+    box-sizing: border-box;
     font-size: 16px;
-    z-index: 1;
+    appearance: none;
+    -webkit-appearance: none;
   }
+}
 
-  /* Mover placeholder al seleccionar o enfocar */
-  .mf-input.has-value ~ .placeholder-sim,
-  .mf-input:focus ~ .placeholder-sim {
-    display: none;
-  }
+/* Estilos base para layout */
+.date_wrap {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Placeholder simulado */
+.placeholder-sim {
+  position: absolute;
+  left: 3px;
+  top: 74%;
+  transform: translateY(-50%);
+  text-transform: none;
+  padding: 3px 10px;
+  background-color: #fafafa;
+  color: var(--c-f184fe1);
+  pointer-events: none;
+  font-size: 16px;
+  z-index: 1;
+}
+
+/* Mover placeholder al seleccionar o enfocar */
+.mf-input.has-value ~ .placeholder-sim,
+.mf-input:focus ~ .placeholder-sim {
+  display: none;
+}
