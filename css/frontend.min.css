@@ -1524,6 +1524,26 @@ h1.entry-title {
   #elementor-device-mode:after {
     content: "tablet";
   }
+
+  .elementor-954
+    .elementor-element.elementor-element-7d3c765:not(
+      .elementor-motion-effects-element-type-background
+    ),
+  .elementor-954
+    .elementor-element.elementor-element-da0c673:not(
+      .elementor-motion-effects-element-type-background
+    ),
+  .elementor-954
+    .elementor-element.elementor-element-22e5486:not(
+      .elementor-motion-effects-element-type-background
+    ),
+  .elementor-954
+    .elementor-element.elementor-element-a2c753c:not(
+      .elementor-motion-effects-element-type-background
+    ) {
+    padding: 25px;
+    text-align: left !important;
+  }
 }
 
 @media (max-width: -1) {
@@ -1828,6 +1848,14 @@ body.rtl .e-con {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .elementor-954 .elementor-element.elementor-element-86c428e,
+  .elementor-954 .elementor-element.elementor-element-86a6e79,
+  .elementor-954 .elementor-element.elementor-element-9be89b9,
+  .elementor-954 .elementor-element.elementor-element-3652cdf {
+    padding: 25px;
+    text-align: left !important;
   }
 }
 
