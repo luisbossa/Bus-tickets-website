@@ -1658,7 +1658,9 @@ body.rtl .e-con {
 }
 
 .p_bottom {
-  padding: 35px 0 43px 0 !important;
+  display: flex;
+  padding: 35px 0 40px 0 !important;
+  align-items: center !important;
 }
 
 .e-con-full.e-flex,
@@ -1709,13 +1711,13 @@ body.rtl .e-con {
 
 .e-con.e-flex > .e-con-inner {
   align-content: var(--align-content);
-  align-items: var(--align-items);
+  align-items: start;
   align-self: auto;
   flex-basis: auto;
   flex-grow: 1;
   flex-shrink: 1;
   flex-wrap: var(--flex-wrap);
-  justify-content: var(--justify-content);
+  justify-content: center
 }
 
 .e-con.e-grid > .e-con-inner {

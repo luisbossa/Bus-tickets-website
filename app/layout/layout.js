@@ -168,7 +168,6 @@ footer.innerHTML = `
                             </div>
                             <div class="elementor-element elementor-element-c9fd055 e-flex e-con-boxed e-con e-child"
                                 data-id="c9fd055" data-element_type="container">
-                                <div class="e-con-inner">
                                     <div class="elementor-element elementor-element-242d95b elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                         data-id="242d95b" data-element_type="widget"
                                         data-widget_type="icon-list.default">
@@ -195,7 +194,6 @@ footer.innerHTML = `
                                                     <span class="elementor-icon-list-text">San José, Escazú, frente a Vista Real.</span>
                                                 </li>
                                             </ul>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -210,7 +208,6 @@ footer.innerHTML = `
                             </div>
                             <div class="elementor-element elementor-element-1246505 e-flex e-con-boxed e-con e-child"
                                 data-id="1246505" data-element_type="container">
-                                <div class="e-con-inner">
                                     <div class="elementor-element elementor-element-d3c396f elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                         data-id="d3c396f" data-element_type="widget"
                                         data-widget_type="icon-list.default">
@@ -226,7 +223,6 @@ footer.innerHTML = `
                                                     <a href="/app/faq/faq.html" class="elementor-icon-list-text">Preguntas & Respuestas</a>
                                                 </li>
                                             </ul>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -33,13 +33,16 @@
     <script src="/js/ui.js"></script>
 </head>
 
-<body
-    class="elementor-kit-28">
+<body class="elementor-kit-28">
     <div id="page" class="hfeed site">
 
         <header id="masthead" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
             <!-- Header dinámico -->
         </header>
+
+        <div id="custom-notification" class="notification-blur">
+            <p id="notification-message">Mensaje de notificación</p>
+        </div>
 
         <div data-elementor-type="wp-post" data-elementor-id="1033" class="elementor elementor-1033">
             <div class="elementor-element elementor-element-043cc16 e-flex e-con-boxed e-con e-parent" data-id="043cc16"
@@ -91,132 +94,114 @@
                                                                 class="elementor elementor-1038">
                                                                 <div class="elementor-element elementor-element-13b54d6 e-flex e-con-boxed e-con e-parent"
                                                                     data-id="13b54d6" data-element_type="container">
-                                                                    <div class="e-con-inner">
-                                                                        <div class="elementor-element elementor-element-00138e8 e-con-full e-flex e-con e-child"
-                                                                            data-id="00138e8"
+                                                                    <div class="elementor-element elementor-element-00138e8 e-con-full e-flex e-con e-child"
+                                                                        data-id="00138e8" data-element_type="container">
+                                                                        <div class="elementor-element elementor-element-09b22f3 e-con-full e-flex e-con e-child"
+                                                                            data-id="09b22f3"
                                                                             data-element_type="container">
-                                                                            <div class="elementor-element elementor-element-09b22f3 e-con-full e-flex e-con e-child"
-                                                                                data-id="09b22f3"
-                                                                                data-element_type="container">
-                                                                                <div class="elementor-element elementor-element-409bab0 elementor-widget__width-inherit elementor-widget elementor-widget-mf-listing-fname"
-                                                                                    data-id="409bab0"
-                                                                                    data-element_type="widget">
-                                                                                    <div
-                                                                                        class="elementor-widget-container">
-                                                                                        <div class="mf-input-wrapper">
-                                                                                            <label
-                                                                                                class="mf-input-label"
-                                                                                                for="mf-input-text-409bab0">
-                                                                                                Nombre completo <span
-                                                                                                    class="mf-input-required-indicator"></span>
-                                                                                            </label>
-                                                                                            <input type="text"
-                                                                                                class="mf-input"
-                                                                                                id="mf-input-text-409bab0"
-                                                                                                name="mf-listing-fname"
-                                                                                                placeholder="Nombre completo" />
-                                                                                            <span
-                                                                                                class="mf-error-message"></span>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="elementor-element elementor-element-cf63097 e-con-full e-flex e-con e-child"
-                                                                                data-id="cf63097"
-                                                                                data-element_type="container">
-                                                                                <div class="elementor-element elementor-element-8b95674 elementor-widget__width-inherit elementor-widget elementor-widget-mf-email"
-                                                                                    data-id="8b95674"
-                                                                                    data-element_type="widget">
-                                                                                    <div
-                                                                                        class="elementor-widget-container">
-                                                                                        <div class="mf-input-wrapper">
-                                                                                            <label
-                                                                                                class="mf-input-label"
-                                                                                                for="mf-input-email-8b95674">
-                                                                                                Correo <span
-                                                                                                    class="mf-input-required-indicator"></span>
-                                                                                            </label>
-                                                                                            <input type="email"
-                                                                                                class="mf-input"
-                                                                                                id="mf-input-email-8b95674"
-                                                                                                name="mf-email"
-                                                                                                placeholder="Correo" />
-                                                                                            <span
-                                                                                                class="mf-error-message"></span>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="elementor-element elementor-element-ccb8d0a e-con-full e-flex e-con e-child"
-                                                                            data-id="ccb8d0a"
-                                                                            data-element_type="container">
-                                                                            <div class="elementor-element elementor-element-211d4d7 elementor-widget__width-inherit elementor-widget elementor-widget-mf-text"
-                                                                                data-id="211d4d7"
+                                                                            <div class="elementor-element elementor-element-409bab0 elementor-widget__width-inherit elementor-widget elementor-widget-mf-listing-fname"
+                                                                                data-id="409bab0"
                                                                                 data-element_type="widget">
                                                                                 <div class="elementor-widget-container">
                                                                                     <div class="mf-input-wrapper">
                                                                                         <label class="mf-input-label"
-                                                                                            for="mf-input-text-211d4d7">
-                                                                                            Asunto <span
+                                                                                            for="mf-input-text-409bab0">
+                                                                                            Nombre completo <span
                                                                                                 class="mf-input-required-indicator"></span>
                                                                                         </label>
                                                                                         <input type="text"
                                                                                             class="mf-input"
-                                                                                            id="mf-input-text-211d4d7"
-                                                                                            name="mf-text"
-                                                                                            placeholder="Asunto" />
+                                                                                            id="mf-input-text-409bab0"
+                                                                                            name="mf-listing-fname"
+                                                                                            placeholder="Nombre completo" />
                                                                                         <span
                                                                                             class="mf-error-message"></span>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="elementor-element elementor-element-2e1a703 e-con-full e-flex e-con e-child"
-                                                                            data-id="2e1a703"
+                                                                        <div class="elementor-element elementor-element-cf63097 e-con-full e-flex e-con e-child"
+                                                                            data-id="cf63097"
                                                                             data-element_type="container">
-                                                                            <div class="elementor-element elementor-element-73409d3 elementor-tablet-align-justify elementor-mobile-align-justify elementor-widget-tablet__width-inherit elementor-widget elementor-widget-button"
-                                                                                data-id="73409d3"
-                                                                                data-element_type="widget">
-                                                                                <div class="elementor-widget-container">
-                                                                                    <div
-                                                                                        class="elementor-button-wrapper">
-                                                                                        <a class="elementor-button elementor-button-link elementor-size-sm"
-                                                                                            href="#">
-                                                                                            <span
-                                                                                                class="elementor-button-content-wrapper">
-                                                                                                <span
-                                                                                                    class="elementor-button-text">Enviar
-                                                                                                    mensaje</span>
-                                                                                            </span>
-                                                                                        </a>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="elementor-element elementor-element-77f3438 e-con-full e-flex e-con e-child"
-                                                                            data-id="77f3438"
-                                                                            data-element_type="container">
-                                                                            <div class="elementor-element elementor-element-b35b887 elementor-widget__width-inherit elementor-widget elementor-widget-mf-textarea"
-                                                                                data-id="b35b887"
+                                                                            <div class="elementor-element elementor-element-8b95674 elementor-widget__width-inherit elementor-widget elementor-widget-mf-email"
+                                                                                data-id="8b95674"
                                                                                 data-element_type="widget">
                                                                                 <div class="elementor-widget-container">
                                                                                     <div class="mf-input-wrapper">
                                                                                         <label class="mf-input-label"
-                                                                                            for="mf-input-text-area-b35b887">
-                                                                                            Mensaje <span
+                                                                                            for="mf-input-email-8b95674">
+                                                                                            Correo <span
                                                                                                 class="mf-input-required-indicator"></span>
                                                                                         </label>
-                                                                                        <textarea
-                                                                                            class="mf-input mf-textarea"
-                                                                                            id="mf-input-text-area-b35b887"
-                                                                                            name="mf-textarea"
-                                                                                            placeholder="Mensaje"
-                                                                                            cols="30"
-                                                                                            rows="10"></textarea>
+                                                                                        <input type="email"
+                                                                                            class="mf-input"
+                                                                                            id="mf-input-email-8b95674"
+                                                                                            name="mf-email"
+                                                                                            placeholder="Correo" />
                                                                                         <span
                                                                                             class="mf-error-message"></span>
                                                                                     </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-ccb8d0a e-con-full e-flex e-con e-child"
+                                                                        data-id="ccb8d0a" data-element_type="container">
+                                                                        <div class="elementor-element elementor-element-211d4d7 elementor-widget__width-inherit elementor-widget elementor-widget-mf-text"
+                                                                            data-id="211d4d7"
+                                                                            data-element_type="widget">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="mf-input-wrapper">
+                                                                                    <label class="mf-input-label"
+                                                                                        for="mf-input-text-211d4d7">
+                                                                                        Asunto <span
+                                                                                            class="mf-input-required-indicator"></span>
+                                                                                    </label>
+                                                                                    <input type="text" class="mf-input"
+                                                                                        id="mf-input-text-211d4d7"
+                                                                                        name="mf-text"
+                                                                                        placeholder="Asunto" />
+                                                                                    <span
+                                                                                        class="mf-error-message"></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-2e1a703 e-con-full e-flex e-con e-child mt_5"
+                                                                        data-id="2e1a703" data-element_type="container">
+                                                                        <div class="elementor-element elementor-element-73409d3 elementor-tablet-align-justify elementor-mobile-align-justify elementor-widget-tablet__width-inherit elementor-widget elementor-widget-button"
+                                                                            data-id="73409d3"
+                                                                            data-element_type="widget">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="elementor-button-wrapper">
+                                                                                    <button
+                                                                                        class="elementor-button elementor-button-link elementor-size-sm h_size"
+                                                                                        type="submit">Enviar Mensaje
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-77f3438 e-con-full e-flex e-con e-child"
+                                                                        data-id="77f3438" data-element_type="container">
+                                                                        <div class="elementor-element elementor-element-b35b887 elementor-widget__width-inherit elementor-widget elementor-widget-mf-textarea"
+                                                                            data-id="b35b887"
+                                                                            data-element_type="widget">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="mf-input-wrapper">
+                                                                                    <label class="mf-input-label"
+                                                                                        for="mf-input-text-area-b35b887">
+                                                                                        Mensaje <span
+                                                                                            class="mf-input-required-indicator"></span>
+                                                                                    </label>
+                                                                                    <textarea
+                                                                                        class="mf-input mf-textarea"
+                                                                                        id="mf-input-text-area-b35b887"
+                                                                                        name="mf-textarea"
+                                                                                        placeholder="Mensaje" cols="30"
+                                                                                        rows="10"></textarea>
+                                                                                    <span
+                                                                                        class="mf-error-message"></span>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -251,10 +236,16 @@
     <script src="/js/webpack.runtime.min.js"></script>
     <script src="/js/frontend-modules.min.js"></script>
 
+    <script src="/js/contact.js"></script>
     <script src="/js/header.js"></script>
     <script src="/js/frontend.min.js"></script>
     <script src="/js/elementor.js"></script>
     <script src="/app/layout/layout.js"></script>
+
+    <script src="/gsap/gsap.min.js"></script>
+    <script src="/gsap/Flip.min.js"></script>
+    <script src="/gsap/CustomEase.min.js"></script>
+    <script src="/js/ui-functions.js"></script>
 </body>
 
 </html>
