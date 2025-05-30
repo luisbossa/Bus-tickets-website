@@ -146,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
     selectHora.innerHTML =
       '<option value="" disabled selected hidden>Seleccione el horario</option>';
     priceInput.value = "";
+    checkValue();
   }
 
   const today = new Date().toISOString().split("T")[0];
@@ -317,7 +318,7 @@ document.addEventListener("DOMContentLoaded", function () {
       sessionStorage.setItem("transportista", transportista);
       sessionStorage.setItem("fechaViaje", `${fechaTexto} ${horaTexto}`);
       sessionStorage.setItem("rutaDescripcion", rutaTexto);
-      sessionStorage.setItem("tipoTiquete", tipoTiquete); // ← agregado
+      sessionStorage.setItem("tipoTiquete", tipoTiquete);
     }
     limpiarCampos();
 
