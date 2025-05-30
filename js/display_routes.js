@@ -49,7 +49,7 @@ const rutas = [
       adultoMayor: "3,200,00",
     },
     imagen: "/images/search_bus_3.webp",
-    asientos: 40,
+    asientos: 57,
     equipaje: 2,
     descripcion: "Terminal 7-10 San José → Monteverde",
     horarios: ["07:00", "10:30", "13:00", "15:30"],
