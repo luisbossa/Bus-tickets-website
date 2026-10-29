@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto | Busena</title>
+    <meta name="description" content="Envíanos tu consulta sobre reservas, cambios, equipaje o paquetería. Estamos para ayudarte." />
+    <link rel="icon" href="/images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body>
+    <header class="site-header"></header>
+
+    <main class="section--compact container">
+        <div class="section-heading section-heading--center">
+            <span class="eyebrow">Envía tu consulta</span>
+            <h1>Estamos para Ayudarte</h1>
+            <p class="lead">Escríbenos sobre tu reserva, cambios de viaje, equipaje o envíos. Te responderemos al correo que indiques.</p>
+        </div>
+
+        <div class="contact">
+            <aside class="contact__info" aria-label="Canales de contacto">
+                <h2>Habla con nosotros</h2>
+                <ul class="contact__channels">
+                    <li>
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        <p><small>Teléfono</small><a href="tel:+50622550093">+(506) 2255-0093</a></p>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <p><small>Correo</small><a href="mailto:contacto@busena.co.cr">contacto@busena.co.cr</a></p>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <p><small>Oficinas</small>San José, Escazú, frente a Vista Real.</p>
+                    </li>
+                </ul>
+
+                <div class="contact__shortcuts">
+                    <h3>¿Buscas una respuesta rápida?</h3>
+                    <a href="/pages/faq.html"><i class="far fa-question-circle" aria-hidden="true"></i> Preguntas frecuentes <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                    <a href="/pages/schedule.html"><i class="far fa-clock" aria-hidden="true"></i> Horarios de rutas <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                    <a href="/pages/legal.html#terminos"><i class="far fa-file-alt" aria-hidden="true"></i> Cambios y reembolsos <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                </div>
+            </aside>
+
+            <form class="contact-form" novalidate>
+                <h2 class="contact-form__title">Envíanos un mensaje</h2>
+
+                <div class="field">
+                    <label class="field__label" for="nombre">Nombre completo</label>
+                    <div class="input-icon">
+                        <i class="far fa-user" aria-hidden="true"></i>
+                        <input class="field__control" type="text" id="nombre" name="nombre" placeholder="Ej. María Rodríguez" autocomplete="name" />
+                    </div>
+                    <span class="field__error" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                    <label class="field__label" for="correo">Correo electrónico</label>
+                    <div class="input-icon">
+                        <i class="far fa-envelope" aria-hidden="true"></i>
+                        <input class="field__control" type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" autocomplete="email" />
+                    </div>
+                    <span class="field__error" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                    <label class="field__label" for="asunto">Motivo</label>
+                    <div class="input-icon">
+                        <i class="fas fa-tag" aria-hidden="true"></i>
+                        <select class="field__control" id="asunto" name="asunto">
+                            <option value="" disabled selected hidden>Selecciona un motivo</option>
+                            <option>Compra o reserva de tiquetes</option>
+                            <option>Cambio de fecha u hora</option>
+                            <option>Equipaje u objetos perdidos</option>
+                            <option>Servicio de paquetería</option>
+                            <option>Facturación y pagos</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                    <span class="field__error" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                    <label class="field__label" for="referencia">Código de reserva <span class="field__optional">(opcional)</span></label>
+                    <div class="input-icon">
+                        <i class="fas fa-ticket-alt" aria-hidden="true"></i>
+                        <input class="field__control" type="text" id="referencia" name="referencia" inputmode="numeric" maxlength="9" placeholder="Ej. 123456789" />
+                    </div>
+                    <span class="field__error" aria-live="polite"></span>
+                </div>
+                <div class="field field--wide">
+                    <label class="field__label" for="mensaje">Mensaje</label>
+                    <textarea class="field__control" id="mensaje" name="mensaje" maxlength="1000" placeholder="Cuéntanos en qué podemos ayudarte"></textarea>
+                    <div class="field__footer">
+                        <span class="field__error" aria-live="polite"></span>
+                        <span class="field__counter" data-counter>0 / 1000</span>
+                    </div>
+                </div>
+
+                <div class="contact-form__footer field--wide">
+                    <p><i class="fas fa-lock" aria-hidden="true"></i> Usamos tus datos solo para responder tu consulta. <a href="/pages/legal.html#privacidad">Política de privacidad</a></p>
+                    <button class="button button--upper" type="submit">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar mensaje
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <script src="/js/core/layout.js"></script>
+    <script src="/js/pages/contact.js"></script>
+</body>
+
+</html>

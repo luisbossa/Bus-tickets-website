@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nuestros Buses | Busena</title>
+    <meta name="description" content="Conoce todos los modelos de autobuses de nuestra flota, sus especificaciones y facilidades a bordo." />
+    <link rel="icon" href="/images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body>
+    <header class="site-header"></header>
+
+    <main>
+        <section class="section--compact container" aria-labelledby="buses-title">
+            <div class="fleet-header">
+                <div class="section-heading">
+                    <span class="eyebrow">Nuestros Buses</span>
+                    <h1 id="buses-title">Explora Nuestra Flota</h1>
+                    <p class="lead">Autocares de fabricantes reconocidos para viajes largos y unidades ágiles para trayectos cortos. Entra a cada modelo para ver su ficha técnica.</p>
+                </div>
+                <ul class="fleet-stats" aria-label="La flota en cifras">
+                    <li><strong data-fleet-stat="modelos"></strong>Modelos</li>
+                    <li><strong data-fleet-stat="fabricantes"></strong>Fabricantes</li>
+                    <li><strong data-fleet-stat="capacidad"></strong>Pasajeros máx.</li>
+                </ul>
+            </div>
+
+            <div class="fleet-filters" role="group" aria-label="Filtrar por uso" data-fleet-filters></div>
+
+            <ul class="fleet-grid" data-fleet-list aria-live="polite"></ul>
+        </section>
+
+        <section class="section container">
+            <div class="panel panel--inset cta-panel">
+                <div class="media cta-panel__image" style="background-image: url('/images/buses.avif')"></div>
+                <div class="cta-panel__body">
+                    <span class="eyebrow">Contáctanos</span>
+                    <h2>¡Súbete a la experiencia!</h2>
+                    <p>Nuestro equipo está listo para ayudarte a planificar tu viaje, resolver tus dudas y brindarte la mejor atención.</p>
+                    <div class="bus-hero__actions">
+                        <a class="button" href="/pages/search.html"><i class="fas fa-ticket-alt" aria-hidden="true"></i> Comprar tiquete</a>
+                        <a class="button button--ghost" href="/pages/contact.html">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <script src="/js/core/layout.js"></script>
+    <script src="/js/data/buses.js"></script>
+    <script src="/js/pages/buses.js"></script>
+</body>
+
+</html>

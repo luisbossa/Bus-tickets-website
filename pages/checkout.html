@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resumen de Compra | Busena</title>
+    <link rel="icon" href="/images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body>
+    <header class="site-header"></header>
+
+    <main class="section--compact container">
+        <ol class="booking-steps" aria-label="Pasos de la compra">
+            <li class="is-done">Ruta</li>
+            <li class="is-done">Asientos</li>
+            <li class="is-current">Resumen</li>
+            <li>Pago</li>
+        </ol>
+
+        <h1 class="page-title">Resumen de Compra</h1>
+
+        <section class="trip-card checkout__trip" aria-label="Tu viaje">
+            <p class="trip-card__place"><small>Origen</small><strong data-trip="origen">—</strong></p>
+            <span class="trip-card__arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+            <p class="trip-card__place"><small>Destino</small><strong data-trip="destino">—</strong></p>
+            <ul class="trip-card__details">
+                <li><i class="far fa-calendar-alt" aria-hidden="true"></i><span data-trip="fecha">Sin fecha</span></li>
+                <li><i class="far fa-clock" aria-hidden="true"></i><span data-trip="hora">Sin horario</span></li>
+                <li><i class="fas fa-couch" aria-hidden="true"></i><span data-trip="asientos">Sin asientos</span></li>
+                <li><i class="fas fa-bus" aria-hidden="true"></i>Busena S.A.</li>
+            </ul>
+        </section>
+
+        <div class="checkout">
+            <section class="card" aria-labelledby="terminals-title">
+                <h2 id="terminals-title">Seleccione las Terminales</h2>
+                <div class="field">
+                    <label class="field__label" for="terminal-origen">Salida</label>
+                    <select class="field__control" id="terminal-origen">
+                        <option value="" disabled selected hidden>Seleccione una terminal de origen</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label class="field__label" for="terminal-destino">Llegada</label>
+                    <select class="field__control" id="terminal-destino">
+                        <option value="" disabled selected hidden>Seleccione una terminal de destino</option>
+                    </select>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="accept-terms" />
+                    <p>
+                        <label for="accept-terms">Acepto los</label>
+                        <button class="link-button" type="button" data-open-terms>Términos y condiciones</button>
+                    </p>
+                </div>
+            </section>
+
+            <div class="checkout__side">
+                <section class="countdown" aria-live="polite">
+                    <span class="countdown__icon"><i class="far fa-clock" aria-hidden="true"></i></span>
+                    <p>
+                        <time data-timer>03:00</time>
+                        Tiempo restante para finalizar tu compra
+                    </p>
+                    <div class="countdown__bar" aria-hidden="true"><span data-timer-bar style="width: 100%"></span></div>
+                </section>
+
+                <section class="card" aria-labelledby="summary-title">
+                    <h2 id="summary-title">Resumen de Compra</h2>
+                    <dl class="summary">
+                        <div><dt>Transportista:</dt><dd>BUSENA S.A.</dd></div>
+                        <div><dt>Fecha de Viaje:</dt><dd data-summary="fecha">No definido</dd></div>
+                        <div><dt>Ruta:</dt><dd data-summary="ruta">No definida</dd></div>
+                        <div><dt>Número de asiento(s):</dt><dd data-summary="asientos">Ninguno</dd></div>
+                        <div><dt data-summary="normal-label">0 Tiquete Normal:</dt><dd data-summary="normal">0</dd></div>
+                        <div><dt data-summary="adulto-label">0 Tiquete Adulto Mayor:</dt><dd data-summary="adulto">0</dd></div>
+                        <div><dt>Comisión Busena:</dt><dd data-summary="comision">0.00</dd></div>
+                        <div><dt>IVA comisión Busena:</dt><dd data-summary="iva">0.00</dd></div>
+                        <div class="summary__total"><dt>Total</dt><dd data-summary="total">0.00</dd></div>
+                    </dl>
+                    <div class="checkout__actions">
+                        <a class="button button--upper" href="/app/pay_form/pay_form.html" data-buy>
+                            Continuar al pago <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a class="button button--ghost button--upper" href="/index.html">Cancelar compra</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <dialog class="dialog dialog--medium" id="terms-dialog" aria-labelledby="terms-title">
+        <header class="dialog__header">
+            <h2 class="dialog__title" id="terms-title">Términos y condiciones del viaje</h2>
+        </header>
+        <div class="dialog__body">
+            <ol class="terms-list">
+                <li>Válido únicamente para la fecha y hora indicada.</li>
+                <li>Este tiquete no es reembolsable. Los cambios de fecha u hora se gestionan con anticipación y están sujetos a disponibilidad.</li>
+                <li>La empresa considera carga todo aquello que no sea enseres personales contemplados, para su transporte, deberá pagar el importe por el transporte del artículo en la oficina correspondiente (Sujeto a espacio).</li>
+                <li>No se permite cargar muebles o electrodomésticos cuyo tamaño exceda la razonabilidad, la empresa se reserva el derecho de cobrar excedente por peso o volumen.</li>
+                <li>No se permite viajar con animales (Ley de Tránsito).</li>
+                <li>Todo asiento ocupado debe cancelarse. En el caso de infantes no pagarán transporte cuando viaje en brazos y hasta 3 años de edad.</li>
+                <li>Nuestra empresa, conforme a la normativa vigente, no realizamos reembolsos, no se responsabilizará por retrasos o suspensiones causados por terceros en vías o puntos de abordaje y desabordaje.</li>
+                <li>El pasajero debe ocupar el asiento indicado en su boleto.</li>
+                <li>El autobús se detendrá únicamente en las paradas autorizadas.</li>
+                <li>Todo pasajero debe mantener las mejores normas de conducta durante el viaje, no se permite pasajeros en estado de embriaguez, fumar, consumir drogas o cualquier otra actitud que atente contra los demás pasajeros, la empresa se reserva el derecho en excluir pasajeros que incumplan esta condición. (Ley de tránsito. Reglamento de transporte)</li>
+                <li>Cuide su equipaje de mano, la empresa no se hace responsable por pérdidas de equipaje de mano.</li>
+            </ol>
+        </div>
+        <form class="dialog__footer" method="dialog">
+            <div class="dialog__actions">
+                <button class="button button--dark" type="submit">Aceptar</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="/js/core/layout.js"></script>
+    <script src="/js/data/routes.js"></script>
+    <script src="/js/pages/checkout.js"></script>
+</body>
+
+</html>

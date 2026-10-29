@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Horarios | Busena</title>
+    <meta name="description" content="Horarios de salida de nuestras rutas desde San José." />
+    <link rel="icon" href="/images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body>
+    <header class="site-header"></header>
+
+    <main>
+        <section class="page-banner" style="background-image: url('/images/medium_img.webp')">
+            <h1>Horarios de Rutas</h1>
+        </section>
+
+        <section class="section container" aria-labelledby="schedule-title">
+            <div class="section-heading section-heading--center">
+                <span class="eyebrow">Salidas desde San José</span>
+                <h2 id="schedule-title">Elige el Horario Ideal</h2>
+                <p class="lead">Consulta las salidas diarias de cada ruta y reserva tu asiento en minutos.</p>
+            </div>
+            <div class="schedule-grid" data-schedule></div>
+        </section>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <script src="/js/core/layout.js"></script>
+    <script src="/js/data/routes.js"></script>
+    <script src="/js/pages/schedule.js"></script>
+</body>
+
+</html>

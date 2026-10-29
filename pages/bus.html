@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bus | Busena</title>
+    <meta name="description" content="Ficha técnica y facilidades a bordo de nuestros buses." />
+    <link rel="icon" href="/images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body>
+    <header class="site-header"></header>
+
+    <main class="section--compact container">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+            <a href="/index.html">Inicio</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <a href="/pages/buses.html">Nuestros buses</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span aria-current="page" data-bus="nombre"></span>
+        </nav>
+
+        <section class="bus-hero" aria-labelledby="bus-title">
+            <div class="bus-hero__stage">
+                <img data-bus="imagen" src="" alt="" />
+            </div>
+            <div class="bus-hero__info">
+                <span class="bus-hero__badge" data-bus="tipo"></span>
+                <h1 id="bus-title" data-bus="nombre"></h1>
+                <p class="bus-hero__maker"><i class="fas fa-industry" aria-hidden="true"></i> <span data-bus="fabricante"></span></p>
+                <ul class="bus-hero__highlights" data-bus="destacados"></ul>
+                <p class="bus-hero__description" data-bus="descripcion"></p>
+                <div class="bus-hero__actions">
+                    <a class="button button--upper" href="/pages/search.html">
+                        <i class="fas fa-search" aria-hidden="true"></i> Buscar rutas
+                    </a>
+                    <a class="button button--ghost" href="/pages/buses.html">Ver toda la flota</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="bus-body">
+            <div class="bus-body__main">
+                <section class="bus-section" aria-labelledby="amenities-title">
+                    <h2 id="amenities-title">Facilidades a bordo</h2>
+                    <ul class="amenity-grid" data-bus="facilidades"></ul>
+                </section>
+
+                <section class="bus-section" aria-labelledby="specs-title">
+                    <h2 id="specs-title">Ficha técnica</h2>
+                    <dl class="spec-table" data-bus="specs"></dl>
+                    <p class="bus-detail__source">
+                        <i class="fas fa-info-circle" aria-hidden="true"></i>
+                        Especificaciones según el fabricante. Pueden variar según la versión y el equipamiento de cada unidad.
+                        <a data-bus="fuente" href="#" target="_blank" rel="noopener">Ver fuente <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                    </p>
+                </section>
+            </div>
+
+            <aside class="bus-body__aside">
+                <section class="sidebar-card">
+                    <h2>Otros buses</h2>
+                    <ul class="mini-bus-list" data-bus="otros"></ul>
+                </section>
+                <section class="sidebar-card sidebar-card--dark">
+                    <h2>¿Tienes preguntas?</h2>
+                    <p>Nuestro equipo te ayuda a elegir la ruta y el horario ideal.</p>
+                    <ul>
+                        <li><a href="tel:+50622550093"><i class="fas fa-phone-alt" aria-hidden="true"></i>+(506) 2255-0093</a></li>
+                        <li><a href="mailto:contacto@busena.co.cr"><i class="fas fa-envelope" aria-hidden="true"></i>contacto@busena.co.cr</a></li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
+
+        <nav class="bus-pager" aria-label="Otros modelos" data-bus="pager"></nav>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <script src="/js/core/layout.js"></script>
+    <script src="/js/data/buses.js"></script>
+    <script src="/js/pages/bus.js"></script>
+</body>
+
+</html>

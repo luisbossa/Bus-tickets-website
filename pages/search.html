@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Buscar rutas | Busena</title>
+    <meta name="description" content="Busca rutas disponibles y elige tus asientos." />
+    <link rel="icon" href="/images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body>
+    <header class="site-header"></header>
+
+    <main>
+        <ol class="booking-steps container" aria-label="Pasos de la compra">
+            <li class="is-current" data-step="ruta">Ruta</li>
+            <li data-step="asientos">Asientos</li>
+            <li>Resumen</li>
+            <li>Pago</li>
+        </ol>
+
+        <section class="hero hero--compact" aria-labelledby="search-title">
+            <div class="hero__content">
+                <p class="hero__eyebrow">Reserva tu viaje</p>
+                <h1 id="search-title">Encuentra tu Ruta</h1>
+                <p>Elige tu destino, la fecha y el horario que mejor se ajuste a tu viaje.</p>
+            </div>
+
+            <form class="booking-form booking-form--inline" action="/pages/search.html" method="get" novalidate>
+                <div class="field">
+                    <label class="field__label" for="origen">De</label>
+                    <span class="field__hint">Lugar de salida</span>
+                    <select class="field__control" id="origen" name="origen">
+                        <option value="" disabled selected hidden>Seleccione una ubicación</option>
+                        <option value="San José">San José</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label class="field__label" for="destino">Hasta</label>
+                    <span class="field__hint">Lugar de llegada</span>
+                    <select class="field__control" id="destino" name="destino">
+                        <option value="" disabled selected hidden>Seleccione una ubicación</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label class="field__label" for="fecha">Fecha</label>
+                    <span class="field__hint">Fecha de viaje</span>
+                    <input class="field__control" type="date" id="fecha" name="fecha" />
+                </div>
+                <div class="field">
+                    <label class="field__label" for="hora">Horario</label>
+                    <span class="field__hint">Hora de salida</span>
+                    <select class="field__control" id="hora" name="hora">
+                        <option value="" disabled selected hidden>Seleccione el horario</option>
+                    </select>
+                </div>
+                <button class="button button--dark" type="submit">
+                    <i class="fas fa-search" aria-hidden="true"></i> Buscar rutas
+                </button>
+            </form>
+        </section>
+
+        <section class="section container" aria-labelledby="results-title">
+            <div class="section-heading">
+                <span class="eyebrow">Resultados</span>
+                <h2 id="results-title">Rutas Disponibles</h2>
+            </div>
+            <div class="results" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <dialog class="dialog" id="seat-dialog" aria-labelledby="seat-dialog-title">
+        <header class="dialog__header">
+            <h2 class="dialog__title" id="seat-dialog-title">Elige tus asientos</h2>
+            <button class="dialog__close" type="button" data-close aria-label="Cerrar">X</button>
+        </header>
+        <div class="dialog__body">
+            <h3 class="seat-map__title">Toca un asiento libre para elegirlo · máximo 5 por compra</h3>
+            <p class="seat-map__side">Ventana</p>
+            <div class="seat-map">
+                <div class="seat-map__grid"></div>
+                <img class="seat-map__wheel" src="/images/steering-wheel.webp" alt="Frente del bus" />
+            </div>
+            <p class="seat-map__side">Ventana</p>
+        </div>
+        <footer class="dialog__footer">
+            <ul class="seat-legend">
+                <li><span class="seat"></span>Disponible</li>
+                <li><span class="seat seat--occupied"></span>Ocupado</li>
+                <li><span class="seat is-selected"></span>Tu selección</li>
+                <li><span class="seat seat--special"></span>Asiento especial</li>
+                <li><span class="seat seat--wheelchair">SR</span>Silla de ruedas</li>
+            </ul>
+            <div class="seat-summary" aria-live="polite">
+                <div class="seat-summary__seats" data-seat-summary></div>
+                <p class="seat-summary__total">Subtotal<strong data-seat-total>₡ 0,00</strong></p>
+            </div>
+            <div class="dialog__actions">
+                <button class="button button--ghost" type="button" data-clear-seats>Limpiar</button>
+                <button class="button button--upper" type="button" data-accept-seats disabled>
+                    Continuar <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </footer>
+    </dialog>
+
+    <dialog class="dialog dialog--small" id="ticket-type-dialog" aria-labelledby="ticket-type-title">
+        <form method="dialog" novalidate>
+            <header class="dialog__header">
+                <h2 class="dialog__title" id="ticket-type-title">Selección de Tiquete</h2>
+            </header>
+            <div class="dialog__body">
+                <label><input type="radio" name="tipo" value="normal" checked /> Normal</label>
+                <label><input type="radio" name="tipo" value="adulto" /> Adulto Mayor (65 años o más)</label>
+                <div class="senior-fields" data-cedula hidden>
+                    <div class="field">
+                        <label class="field__label" for="cedula">Cédula de identidad</label>
+                        <input class="field__control" type="text" id="cedula" name="cedula" inputmode="numeric" maxlength="9" placeholder="Ej. 105550555" />
+                    </div>
+                    <div class="field">
+                        <label class="field__label" for="nacimiento">Fecha de nacimiento</label>
+                        <input class="field__control" type="date" id="nacimiento" name="nacimiento" />
+                    </div>
+                    <p class="field__hint">Deberás presentar la cédula al abordar.</p>
+                    <span class="field__error" aria-live="polite"></span>
+                </div>
+                <div class="dialog__actions">
+                    <button class="button button--dark" type="submit">Agregar</button>
+                </div>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="/js/core/layout.js"></script>
+    <script src="/js/data/routes.js"></script>
+    <script src="/js/pages/search.js"></script>
+</body>
+
+</html>
